@@ -1,0 +1,61 @@
+html,
+body {
+  height: 100%;
+  font-family: "Proxima Nova Rg";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1257px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  border-radius: 2px;
+  font-weight: 600;
+  line-height: 1.42857143;
+  padding: 7px 40px;
+  font-size: 13px;
+  border: none;
+  text-transform: uppercase;
+}
+.btn-dark {
+  border-radius: 2px;
+  font-weight: 600;
+  line-height: 1.42857143;
+  padding: 7px 40px;
+  font-size: 13px;
+  border: none;
+  color: #fff;
+  background-color: #000;
+}
+.btn-pink {
+  border-radius: 2px;
+  font-weight: 600;
+  line-height: 1.42857143;
+  padding: 7px 40px;
+  font-size: 13px;
+  border: none;
+  color: #000;
+  background-color: $pink;
+}
+.btn-sm {
+  font-size: 12px;
+  padding: 5px 20px;
+}
