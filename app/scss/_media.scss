@@ -1,0 +1,114 @@
+@media (max-width: 940px) {
+    .desing__item {
+        width: 100%;
+    }
+    .desing__text {
+        width: 168px;
+        margin: 0 auto 30px auto;
+    }
+    .desing__btn {
+        padding: 10px 40px;
+        font-size: 14px;
+        width: 313px;
+    }
+}
+
+@media (max-width: 780px) {
+    .privacy__inner {
+        display: block;
+    }
+    .privacy__item {
+        width: 100%;
+    }
+    .privacy__title {
+        margin-bottom: 20px;
+    }
+    .privacy__item-text {
+        margin-top: 30px;
+    }
+    .privacy__form-pass {
+        display: block;
+    }
+    .form__group {
+        width: 100%;
+    }
+    .aside {
+        position: absolute;
+        z-index: 1010;
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+        transform: translateX(-105%);
+        transition: all 0.3s;
+        position: fixed;
+        overflow-y: auto;
+        height: 100%;
+    }
+    .container {
+        padding: 0 40px;
+    }
+
+    .aside-active {
+        transform: translateX(0%);
+    }
+    .menu {
+        display: block;
+    }
+}
+
+@media (max-width: 760px) {
+    .desing__inner {
+        display: block;
+    }
+    .desing__img {
+        width: 100%;
+    }
+    .desing__text {
+        margin-top: 20px;
+    }
+    .desing__btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    .top__btn {
+        display: block;
+        justify-content: center;
+        margin: 15px auto;
+    }
+    .top__btn-site {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .btn-sm {
+        width: 230px;
+    }
+    .menu__burger {
+        top: 106px;
+    }
+    .webadress__link {
+        word-break: break-all;
+    }
+    .driver__title {
+        padding-left: 40px;
+    }
+    .stylePage__button {
+        flex-direction: column;
+        width: 270px;
+        margin: 15px auto 30px auto;
+    }
+    .stylePage__btn-1 {
+        margin-bottom: 10px;
+    }
+    .desing__title {
+        margin-bottom: 20px;
+    }
+    .desing__content {
+        width: 100%;
+    }
+    .stylePage__button {
+        width: 100%;
+    }
+}

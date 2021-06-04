@@ -5,19 +5,8 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.main {
-  flex: 1 0 auto;
-}
-.footer {
-  flex: 0 0 auto;
+  line-height: 1.42857143;
+  color: #212529;
 }
 
 .container {
@@ -25,7 +14,19 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+.main {
+  width: 100%;
+}
 
+
+
+
+
+// ============== Buttons =====================
 .btn {
   border-radius: 2px;
   font-weight: 600;
@@ -36,26 +37,278 @@ body {
   text-transform: uppercase;
 }
 .btn-dark {
-  border-radius: 2px;
-  font-weight: 600;
-  line-height: 1.42857143;
-  padding: 7px 40px;
-  font-size: 13px;
-  border: none;
   color: #fff;
   background-color: #000;
 }
+.btn-gray {
+  background-color: #e5e6e7;
+}
 .btn-pink {
-  border-radius: 2px;
-  font-weight: 600;
-  line-height: 1.42857143;
-  padding: 7px 40px;
-  font-size: 13px;
-  border: none;
   color: #000;
   background-color: $pink;
 }
 .btn-sm {
   font-size: 12px;
   padding: 5px 20px;
+}
+.title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+
+
+
+
+.top__btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.top__btn-demo {
+    background-color: $pink;
+}
+.top__btn-site {
+    margin-left: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
+// =======================================
+.aside {
+    width: 250px;
+    min-width: 250px;
+    background-color: #f5f5f5;
+    margin-right: 20px;
+    padding: 20px;
+}
+.aside__title {
+    padding: 30px 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+}
+.aside__list-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aside__list-text {
+    color: #000;
+}
+.aside__list-text:hover {
+    text-decoration: underline;
+}
+
+
+
+
+//=====================================
+.menu__burger-icon {
+    display: none;
+}
+
+
+
+
+
+
+
+
+// =========================================
+input[type="checkbox"].toggle {
+  display: none;
+}
+input[type="checkbox"].toggle + label {
+  display: inline-block;
+  height: 17px;
+  width: 60px;
+  position: relative;
+  font-size: 11px;
+  font-weight: 300;
+  background-color: #ccc;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+input[type="checkbox"].toggle + label::before {
+  position: absolute;
+  top: -3px;
+  height: 23px;
+  width: 23px;
+  content: "";
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+input[type="checkbox"].toggle + label::after {
+  width: 40px;
+  text-align: center;
+  z-index: 2;
+  text-transform: uppercase;
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+input[type="checkbox"].toggle + label.switch-1,
+input[type="checkbox"].toggle + label.switch-2,
+input[type="checkbox"].toggle + label.switch-3,
+input[type="checkbox"].toggle + label.switch-4,
+input[type="checkbox"].toggle + label.switch-5,
+input[type="checkbox"].toggle + label.switch-6,
+input[type="checkbox"].toggle + label.switch-7,
+input[type="checkbox"].toggle + label.switch-8,
+input[type="checkbox"].toggle + label.privacy-switch {
+  border-radius: 30px;
+}
+input[type="checkbox"].toggle + label.switch-1::before,
+input[type="checkbox"].toggle + label.switch-2::before,
+input[type="checkbox"].toggle + label.switch-3::before,
+input[type="checkbox"].toggle + label.switch-4::before,
+input[type="checkbox"].toggle + label.switch-5::before,
+input[type="checkbox"].toggle + label.switch-6::before,
+input[type="checkbox"].toggle + label.switch-7::before,
+input[type="checkbox"].toggle + label.switch-8::before,
+input[type="checkbox"].toggle + label.privacy-switch::before {
+  border-radius: 50px;
+}
+
+input[type="checkbox"].toggle:not(:checked) + label {
+  background-color: #ccc;
+  text-align: right;
+}
+input[type="checkbox"].toggle:not(:checked) + label::after {
+  content: attr(data-unchecked);
+  right: -3px;
+  left: auto;
+  color: #000;
+}
+input[type="checkbox"].toggle:not(:checked) + label::before {
+  left: 0;
+  background-color: #000;
+}
+input[type="checkbox"].toggle:checked + label {
+  text-align: left;
+}
+input[type="checkbox"].toggle:checked + label::after {
+  content: attr(data-checked);
+  left: 2px;
+  right: auto;
+  opacity: 1;
+  color: #000;
+}
+input[type="checkbox"].toggle:checked + label::before {
+  left: 37px;
+  background-color: $pink;
+}
+
+
+
+
+
+
+// ==============================================
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow: auto;
+  background-color: rgba(76, 78, 82, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.modal.show {
+  display: flex;
+}
+.menu {
+  position: absolute;
+  background-color: #fff;
+  padding: 8px;
+  width: 40px;
+  height: 37px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+  top: 103px;
+  left: 0;
+  z-index: 1002;
+  display: none;
+  position: fixed;
+  transform: translateX(0%);
+  transition: all .3s;
+}
+.menu-transform{
+  transform: translateX(250px);
+}
+.nav-toggle {
+  width: 25px;
+  padding: 10px 0;
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+.nav-toggle:focus {
+  outline: 0;
+}
+
+.nav-toggle__item {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: background 0.2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item {
+  background: none;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.2s linear;
+}
+
+.nav-toggle__item:before {
+  top: -8px;
+}
+
+.nav-toggle__item:after {
+  bottom: -8px;
+}
+
+.nav-toggle.active .nav-toggle__item:before {
+  transform-origin: left top;
+  transform: rotate(45deg) translate3d(3px, -4px, 0);
+}
+
+.nav-toggle.active .nav-toggle__item:after {
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translate3d(3px, 3px, 0);
 }
