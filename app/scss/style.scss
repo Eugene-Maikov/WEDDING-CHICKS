@@ -4,10 +4,6 @@
 @import "libs";
 @import "global";
 
-
-
-
-
 //=====================================
 .driver__title {
     padding: 20px;
@@ -33,10 +29,6 @@
     display: flex;
     justify-content: flex-end;
 }
-
-
-
-
 
 //=====================================
 .privacy {
@@ -79,15 +71,16 @@
     color: #495057;
     padding: 6px 10px;
     border: 1px solid #ccc;
+    margin-bottom: 5px;
 }
 .privacy__btn {
     margin-top: 15px;
     display: flex;
     justify-content: flex-end;
 }
-
-
-
+.form__input:focus {
+    border: 1px solid #000;
+}
 
 // ============== Desing =====================
 .desing {
@@ -211,5 +204,342 @@
     display: flex;
     justify-content: flex-end;
 }
+
+// ==================================================================================
+// =============================== Добро пожаловать =================================
+// ==================================================================================
+.welcome__intro-box {
+    background-color: #f5f5f5;
+}
+.welcome__title {
+    padding: 20px 15px;
+    font-weight: 400;
+    font-size: 21px;
+}
+.welcome__text {
+    padding: 20px;
+}
+
+.form__welcome-inner {
+    display: flex;
+    flex-direction: column;
+}
+.form__welcome-items {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form__welcome-item {
+    width: 50%;
+    margin-right: 10px;
+}
+.form__label-welcome {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+.form__input-welcom {
+    width: 100%;
+    margin-top: 10px;
+}
+
+// =========================================================
+.hello__text {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.hello__link {
+    color: #212529;
+    font-size: 12px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.hello__list-item {
+    font-size: 12px;
+    margin-top: 15px;
+}
+.hello__list-ml {
+    padding-left: 15px;
+}
+.download__images-inner {
+    display: flex;
+    margin: 15px 0;
+    margin-top: 20px;
+}
+.download__images-item {
+    width: 33.33333%;
+    margin: 15px;
+}
+.download__images-img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.input__images-inner {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.input__images-item {
+    margin-right: 4px;
+}
+input[type="file"] {
+    display: none;
+}
+.btn-download {
+    height: 23px;
+    border-radius: 2px;
+    font-weight: 600;
+    line-height: 1.42857143;
+    padding: 4px 15px;
+    font-size: 10px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+}
+.label__file {
+    height: 23px;
+    border-radius: 2px;
+    font-weight: 600;
+    line-height: 1.42857143;
+    padding: 5px 15px;
+    padding-bottom: 5.8px;
+    font-size: 10px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+}
+.form__textarea {
+    outline: none;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 214px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.form__textarea:focus {
+    border: 1px solid #000;
+}
+.upload__photo__inner {
+    display: flex;
+}
+.upload__photo__item {
+    width: 50%;
+    padding: 10px 15px;
+    padding-bottom: 20px;
+}
+.upload__btn {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    &-item {
+        margin-right: 4px;
+    }
+}
+.btn__saveChanges {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    &.btn__save {
+        width: 300px;
+    }
+}
+
+// ==================================================================================
+// =============================== Люди =============================================
+// ==================================================================================
+.top__info {
+    background-color: #f5f5f5;
+}
+.info__title {
+    font-size: 21px;
+    text-transform: uppercase;
+    padding: 15px;
+    font-weight: 400;
+}
+.info__text {
+    padding: 15px;
+    line-height: 24px;
+}
+.people {
+    padding: 15px 0;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+.people__form-inner {
+    padding: 0 15px;
+}
+.people__form-image {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+.people__form-inputs {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.people__buttons {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.people__form-item {
+    display: flex;
+    flex-direction: column;
+}
+.people__form-input {
+    width: 370px;
+    margin-bottom: 20px;
+}
+.people__form-textarea {
+    width: 370px;
+}
+.people__form-textarea {
+    height: 215px;
+}
+.people__btn-save {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+//====================================================
+.party {
+    padding: 25px 0;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.party__images {
+    width: 40%;
+}
+.party__forms {
+    width: 60%;
+    padding: 0 15px;
+}
+.party__img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.party__form-inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.party__form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+.party__form-input {
+    margin-bottom: 15px;
+}
+
+.party__form-textarea {
+    height: 115px;
+}
+.party__forms-delete {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #212529;
+}
+.party__buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+.party__btn {
+    margin-left: 4px;
+}
+.parents {
+    padding: 25px 0;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+.parents-wrap {
+    flex-wrap: wrap;
+}
+.parents__wrap-item {
+    margin-bottom: 30px;
+}
+.people__buttons-bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+.people__btn {
+    margin-left: 4px;
+}
+
+// ==================================================================================
+// =============================== Расписание =======================================
+// ==================================================================================
+.form__timing {
+    display: flex;
+    &-date {
+        width: 60%;
+        margin-right: 10px;
+    }
+    &-time {
+        width: 40%;
+    }
+}
+
+.form__place {
+    display: flex;
+    margin-top: 15px;
+    &-city,
+    &-state,
+    &-index {
+        width: 33.33333%;
+    }
+    &-city,
+    &-state {
+        margin-right: 10px;
+    }
+}
+.timing__buttons{
+    display: flex;
+    justify-content: flex-end;
+    .btn-timing{
+        margin-left: 10px;
+    }
+}
+.form__edit{
+    display: none;
+    &-active{
+        display: block;
+    }
+}
+// ==================================================================================
+// =============================== RSVP =============================================
+// ==================================================================================
+.info__list{
+    margin-bottom: 20px;
+    &-step{
+        padding-left: 15px;
+        padding-top: 5px;
+        span{
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 @import "media";

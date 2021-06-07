@@ -8,10 +8,15 @@ body {
   line-height: 1.42857143;
   color: #212529;
 }
-
+body.no-scroll {
+  overflow: hidden;
+}
 .container {
   max-width: 1257px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+.container-fluid {
   padding: 0 15px;
 }
 .content {
@@ -22,12 +27,9 @@ body {
   width: 100%;
 }
 
-
-
-
-
 // ============== Buttons =====================
 .btn {
+  cursor: pointer;
   border-radius: 2px;
   font-weight: 600;
   line-height: 1.42857143;
@@ -57,69 +59,53 @@ body {
   font-size: 16px;
 }
 
-
-
-
-
 .top__btn {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 .top__btn-demo {
-    background-color: $pink;
+  background-color: $pink;
 }
 .top__btn-site {
-    margin-left: 5px;
-    background-color: #000;
-    color: #fff;
+  margin-left: 5px;
+  background-color: #000;
+  color: #fff;
 }
-
-
-
 
 // =======================================
 .aside {
-    width: 250px;
-    min-width: 250px;
-    background-color: #f5f5f5;
-    margin-right: 20px;
-    padding: 20px;
+  width: 250px;
+  min-width: 250px;
+  background-color: #f5f5f5;
+  margin-right: 20px;
+  padding: 20px;
 }
 .aside__title {
-    padding: 30px 20px;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-align: center;
+  padding: 30px 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
 }
 .aside__list-item {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  outline: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .aside__list-text {
-    color: #000;
+  color: #000;
 }
 .aside__list-text:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
-
-
 
 //=====================================
 .menu__burger-icon {
-    display: none;
+  display: none;
 }
-
-
-
-
-
-
-
 
 // =========================================
 input[type="checkbox"].toggle {
@@ -166,6 +152,7 @@ input[type="checkbox"].toggle + label.switch-5,
 input[type="checkbox"].toggle + label.switch-6,
 input[type="checkbox"].toggle + label.switch-7,
 input[type="checkbox"].toggle + label.switch-8,
+input[type="checkbox"].toggle + label.resolution,
 input[type="checkbox"].toggle + label.privacy-switch {
   border-radius: 30px;
 }
@@ -177,6 +164,7 @@ input[type="checkbox"].toggle + label.switch-5::before,
 input[type="checkbox"].toggle + label.switch-6::before,
 input[type="checkbox"].toggle + label.switch-7::before,
 input[type="checkbox"].toggle + label.switch-8::before,
+input[type="checkbox"].toggle + label.resolution::before,
 input[type="checkbox"].toggle + label.privacy-switch::before {
   border-radius: 50px;
 }
@@ -210,11 +198,6 @@ input[type="checkbox"].toggle:checked + label::before {
   background-color: $pink;
 }
 
-
-
-
-
-
 // ==============================================
 .modal {
   display: none;
@@ -222,7 +205,7 @@ input[type="checkbox"].toggle:checked + label::before {
   height: 100%;
   padding: 15px;
   overflow: auto;
-  background-color: rgba(76, 78, 82, 0.6);
+  background-color: rgba(76, 78, 82, 0.2);
   position: fixed;
   top: 0;
   left: 0;
@@ -245,9 +228,9 @@ input[type="checkbox"].toggle:checked + label::before {
   display: none;
   position: fixed;
   transform: translateX(0%);
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.menu-transform{
+.menu-transform {
   transform: translateX(250px);
 }
 .nav-toggle {
@@ -311,4 +294,194 @@ input[type="checkbox"].toggle:checked + label::before {
 .nav-toggle.active .nav-toggle__item:after {
   transform-origin: left bottom;
   transform: rotate(-45deg) translate3d(3px, 3px, 0);
+}
+.form__label-welcome span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+.form__item-question {
+  position: relative;
+}
+.box-map {
+  transform: scale(0);
+  position: absolute;
+
+  width: 300px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+.box-map ol {
+  padding-left: 10px;
+}
+.box-map--active {
+  display: block;
+  transform: scale(1);
+}
+.question-icon {
+  outline: none;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  display: inline;
+  margin-bottom: -3px;
+}
+.btn-delete {
+  width: 15px;
+  margin-bottom: -3px;
+  display: inline;
+}
+.btn-edit {
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: 5px 20px;
+}
+// ======== Подтвердите удаление ================
+.box__delete {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  margin: 60px auto;
+  transform: scale(0);
+  border-radius: 5px;
+  padding: 15px;
+  width: 450px;
+  transition: all 0.3s ease;
+  &-close {
+    width: 15px;
+    cursor: pointer;
+  }
+  &-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .box__title {
+    margin-bottom: 10px;
+  }
+  .timing__buttons-delete {
+    margin: 20px 24px 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .box__delete-btn {
+    margin-left: 10px;
+    padding: 5px 20px;
+  }
+}
+.box__delete-active {
+  transform: scale(1);
+}
+//==============================
+.pink__link {
+  color: $pink;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.buttons-elements {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.form__item {
+  margin-top: 15px;
+}
+.form__item-top {
+  margin-top: 0;
+}
+.btn-elements {
+  margin-left: 10px;
+  padding: 5px 20px;
+}
+.form__welcome-group {
+  background-color: #f5f5f5;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+}
+.button-big {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.btn-big {
+  padding: 10px 40px;
+  font-size: 15px;
+}
+
+//======================== Модальное окно ====================
+.modal__information {
+  width: 800px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1002;
+  top: 100px;
+  background-color: #fff;
+  margin: 20px;
+  padding: 24px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.modal__information-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.modal__information-resolution {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.modal__information-text {
+  color: #6c757d;
+  margin-right: 15px;
+}
+// ============ Радио-кнопки =================
+.modal__information-radioButtons {
+  display: flex;
+  justify-content: center;
+  .modal__information-radio {
+    margin: 7px;
+  }
+}
+
+.modal__information-radio {
+  margin-bottom: 10px;
+}
+.modal__information-radio input[type="radio"] {
+  display: none;
+}
+.modal__information-radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+}
+.modal__information-radio label:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 17px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 1px solid #000;
+  transition: all 0.2s ease;
+}
+/* Checked */
+.modal__information-radio input[type="radio"]:checked + label:before {
+  background-color: green;
 }

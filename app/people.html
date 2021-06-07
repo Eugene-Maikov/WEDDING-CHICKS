@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header__button">
+            <div class="container">
+                <div class="top__btn">
+                    <button class="top__btn-demo btn btn-sm" href="#" type="button">просмотр демо-сайта</button>
+                    <button class="top__btn-site btn btn-sm" href="#" type="button">просмотр демо-сайта</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="modal"></div>
+            <aside class="aside">
+                <button class="btn btn-pink">управление контентом</button>
+                <h4 class="aside__title">редактирование страниц</h4>
+                <div class="aside__list">
+                    <div class="aside__list-item">Добро пожаловать</div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">Люди</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-1" checked>
+                            <label class="switch-1" for="switch-1" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">Расписание</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-2" checked>
+                            <label class="switch-2" for="switch-2" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">RSVP</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-3" checked>
+                            <label class="switch-3" for="switch-3" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">Размещение</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-4" checked>
+                            <label class="switch-4" for="switch-4" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">Реестр</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-5" checked>
+                            <label class="switch-5" for="switch-5" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">Фотографии</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-6" checked>
+                            <label class="switch-6" for="switch-6" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">Путешествия</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-7" checked>
+                            <label class="switch-7" for="switch-7" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                    <div class="aside__list-item">
+                        <a class="aside__list-text" href="#">Чем заняться</a>
+                        <div class="aside__list-switch">
+                            <input class="toggle" type="checkbox" id="switch-8" checked>
+                            <label class="switch-8" for="switch-8" data-checked="ON" data-unchecked="OFF"></label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-pink">конструкция выключателя</button>
+                <p class="aside__title">Ваши кости</p>
+                <div class="aside__info">
+                    <p class="aside__info-first">Трек RSVPS</p>
+                    <p class="aside__info-second">Сбор Физических Адресов</p>
+                </div>
+            </aside>
+            <div class="menu">
+                <button class="nav-toggle" id="nav_toggle" type="button">
+                    <span class="nav-toggle__item">Menu</span>
+                </button>
+            </div>
+            <main class="main">
+                <section class="section-info">
+                    <div class="top__info">
+                        <div class="container-fluid">
+                            <h2 class="info__title">люди</h2>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <p class="info__text">
+                            Расскажи немного о вас двоих. Вы также можете добавить
+                            информацию о вашей свадебной вечеринке, а также немного об обоих
+                            ваших партнерах. Вы всегда можете включать и выключать
+                            любую из страниц, перемещая тумблер вправо.
+                        </p>
+                    </div>
+                </section>
+
+                <div class="people">
+                    <form class="people__form" enctype="multipart/form-data" method="post" action="/">
+                        <div class="people__form-inputs">
+                            <div class="people__form-inner">
+                                <div class="people__form-item">
+                                    <div class="people__form-image">
+                                        <img src="images/download-img.jpg" alt="img">
+                                    </div>
+                                    <div class="people__buttons">
+                                        <div class="input__images-item">
+                                            <input class="form__input input__images" id="file" accept="image/*"
+                                                type="file">
+                                            <label class="label__file" for="file">Загрузить</label>
+                                        </div>
+                                        <div class="input__images-item">
+                                            <button class="btn-download">ссылка на инстаграм</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="people__form-item">
+                                    <input class="form__input people__form-input" type="text">
+                                    <textarea class="form__input people__form-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="people__form-inner">
+                                <div class="people__form-item">
+                                    <div class="people__form-image">
+                                        <img src="images/download-img.jpg" alt="img">
+                                    </div>
+                                    <div class="people__buttons">
+                                        <div class="input__images-item">
+                                            <input class="input__images" id="file" accept="image/*" type="file">
+                                            <label class="label__file" for="file">Загрузить</label>
+                                        </div>
+                                        <div class="input__images-item">
+                                            <button class="btn-download">ссылка на инстаграм</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="people__form-item">
+                                    <input class="form__input people__form-input" type="text">
+                                    <textarea class="form__input people__form-textarea"></textarea>
+                                </div>
+                                <div class="people__btn-save">
+                                    <button class="btn btn-dark people__btn" type="submit">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <section class="section-info">
+                    <div class="top__info">
+                        <div class="container-fluid">
+                            <h2 class="info__title">СВАДЕБНАЯ ВЕЧЕРИНКА</h2>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <p class="info__text">
+                            Просто добавьте сюда участников вашей свадебной вечеринки,
+                            чтобы ваши гости могли посмотреть их на вашем свадебном
+                            сайте. Добавьте фотографию и краткое описание, чтобы
+                            крикнуть людям, которые внесли свой вклад в ваш большой день! Если
+                            у вас нет свадебной вечеринки, тогда прыгайте вниз к своим родителям.
+                        </p>
+                    </div>
+                </section>
+                <div class="party">
+                    <form class="party__form" enctype="multipart/form-data" method="post" action="/">
+                        <div class="container-fluid">
+                            <div class="party__form-inner">
+                                <div class="party__images">
+                                    <img class="party__img" src="images/download-img.jpg" alt="images">
+                                    <div class="people__buttons">
+                                        <div class="input__images-item">
+                                            <input class="input__images" id="file" accept="image/*" type="file">
+                                            <label class="label__file" for="file">Загрузить</label>
+                                        </div>
+                                        <div class="input__images-item">
+                                            <button class="btn-download">ссылка на инстаграм</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="party__forms">
+                                    <div class="party__form-inputs">
+                                        <input class="form__input party__form-input" type="text"
+                                            placeholder="Название свадьбы">
+                                        <input class="form__input party__form-input" type="text" placeholder="Имя">
+                                        <input class="form__input party__form-input" type="text"
+                                            placeholder="Трудовая жизнь: немного предыстории о члене свадебной вечеринки.">
+                                        <textarea class="form__input party__form-textarea"
+                                            placeholder="Информация о участнике свадебного торжества. Расскажите, как вы познакомились и почему они присутствуют на вашей свадьбе."></textarea>
+                                        <a class="party__forms-delete" href="#">Удалить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="party__buttons">
+                                    <button class="btn btn-dark party__btn" type="submit">Сохранить</button>
+                                    <button class="btn btn-dark party__btn" type="submit">Добавить другого члена
+                                        партии</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+
+
+
+
+                <section class="section-info">
+                    <div class="top__info">
+                        <div class="container-fluid">
+                            <h2 class="info__title">ТВОИ РОДИТЕЛИ</h2>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <p class="info__text">
+                            Ниже вы делитесь информацией о своих родителях. Если
+                            у вас есть более одного набора родителей, просто нажмите кнопку
+                            “ДОБАВИТЬ ЕЩЕ ОДНОГО РОДИТЕЛЯ”, чтобы добавить еще родителей.
+                        </p>
+                    </div>
+                </section>
+                <div class="parents">
+                    <form class="people__form" enctype="multipart/form-data" method="post" action="/">
+                        <div class="people__form-inputs parents-wrap">
+                            <div class="people__form-inner parents__wrap-item">
+                                <div class="people__form-item">
+                                    <div class="people__form-image">
+                                        <img src="images/download-img.jpg" alt="img">
+                                    </div>
+                                    <div class="people__buttons">
+                                        <div class="input__images-item">
+                                            <input class="form__input input__images" id="file" accept="image/*"
+                                                type="file">
+                                            <label class="label__file" for="file">Загрузить</label>
+                                        </div>
+                                        <div class="input__images-item">
+                                            <button class="btn-download">ссылка на инстаграм</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="people__form-item">
+                                    <input class="form__input people__form-input" type="text" placeholder="Родитель">
+                                    <textarea class="form__input people__form-textarea"
+                                        placeholder="Мы предлагаем, чтобы каждый партнер писал друг о друге. Вы можете поделиться тем, почему вы их так любите, их любимым хобби и/или вашим любимым занятием вместе."></textarea>
+                                </div>
+                            </div>
+                            <div class="people__form-inner parents__wrap-item">
+                                <div class="people__form-item">
+                                    <div class="people__form-image">
+                                        <img src="images/download-img.jpg" alt="img">
+                                    </div>
+                                    <div class="people__buttons">
+                                        <div class="input__images-item">
+                                            <input class="form__input input__images" id="file" accept="image/*"
+                                                type="file">
+                                            <label class="label__file" for="file">Загрузить</label>
+                                        </div>
+                                        <div class="input__images-item">
+                                            <button class="btn-download">ссылка на инстаграм</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="people__form-item">
+                                    <input class="form__input people__form-input" type="text" placeholder="Родитель">
+                                    <textarea class="form__input people__form-textarea"
+                                        placeholder="Мы предлагаем, чтобы каждый партнер писал друг о друге. Вы можете поделиться тем, почему вы их так любите, их любимым хобби и/или вашим любимым занятием вместе."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="people__buttons-bottom">
+                                <button class="btn btn-dark people__btn" type="submit">Сохранить</button>
+                                <button class="btn btn-dark people__btn" type="submit">Добавить другого члена
+                                    партии</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+        <script src="js/main.min.js"></script>
+</body>
+
+</html>

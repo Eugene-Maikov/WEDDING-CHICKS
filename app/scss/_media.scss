@@ -44,15 +44,41 @@
         overflow-y: auto;
         height: 100%;
     }
-    .container {
-        padding: 0 40px;
-    }
-
     .aside-active {
         transform: translateX(0%);
     }
     .menu {
         display: block;
+    }
+
+    .form__welcome-items,
+    .input__images-inner,
+    .upload__btn {
+        display: block;
+    }
+    .input__images-item,
+    .upload__btn-item {
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+    .form__welcome-item {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .form__label-welcome {
+        margin-bottom: 10px;
+    }
+    .people__form-input {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .people__form-textarea {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 30px;
     }
 }
 
@@ -74,6 +100,7 @@
 
 @media (max-width: 520px) {
     .top__btn {
+        width: 230px;
         display: block;
         justify-content: center;
         margin: 15px auto;
@@ -105,10 +132,84 @@
     .desing__title {
         margin-bottom: 20px;
     }
-    .desing__content {
+    .desing__content,
+    .stylePage__button,
+    .stylePage__image,
+    .party__images,
+    .party__forms {
         width: 100%;
     }
-    .stylePage__button {
+    .download__images-inner,
+    .upload__photo__inner {
+        display: block;
+    }
+    .download__images-item,
+    .upload__photo__item {
         width: 100%;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    .people__form-inputs,
+    .party__form-inner {
+        display: block;
+    }
+    .party__buttons,
+    .people__buttons-bottom {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .party__btn,
+    .people__btn {
+        margin-bottom: 5px;
+    }
+    .people__form-input,
+    .people__form-textarea {
+        width: 250px;
+    }
+    .form__timing {
+        display: block;
+        &-date,
+        &-time {
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+    .form__place {
+        display: block;
+        &-city,
+        &-state,
+        &-index {
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+    .box__delete {
+        width: 300px;
+    }
+    .timing__buttons {
+        flex-direction: column;
+        width: 200px;
+        margin: 0 auto;
+        .btn-timing {
+            margin-bottom: 10px;
+        }
+    }
+    .box-map {
+        right: 10px;
+        z-index: 10;
+    }
+    .btn-big{
+        padding: 10px 20px;
+    }
+    .buttons-elements{
+        flex-direction: column;
+        width: 150px;
+        margin: 0 auto;
+        margin-top: 15px;
+        .btn-elements {
+            margin-bottom: 10px;
+        }
     }
 }
