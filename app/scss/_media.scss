@@ -80,6 +80,63 @@
         margin: 0 auto;
         margin-bottom: 30px;
     }
+    .modal__information {
+        width: 630px;
+        margin: 0;
+    }
+}
+@media (max-width: 680px) {
+    .modal__information-resolution {
+        margin-bottom: 15px;
+    }
+    .modal__information-title {
+        font-size: 20px;
+    }
+    .modal__information {
+        width: 350px;
+        overflow: scroll;
+        height: 545px;
+    }
+    .modal__information-tab label {
+        line-height: 21px;
+        padding: 5px 10px;
+    }
+    .modal__information-radioButtons,
+    .ask,
+    .addUsers__group,
+    .info__ack1-formInner,
+    .info__title-formInner {
+        display: block;
+    }
+    .form__place {
+        display: block;
+    }
+    .form__place-city,
+    .form__place-state,
+    .form__place-index {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .info__ack1-formInner .info__ack1-formItem {
+        width: 100%;
+    }
+    .addUsers__btn {
+        width: 164px;
+        margin: 0 auto;
+    }
+    .ask {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .ask__radio {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 390px) {
+    .modal__information {
+        width: 300px;
+    }
 }
 
 @media (max-width: 760px) {
@@ -120,6 +177,39 @@
     }
     .driver__title {
         padding-left: 40px;
+    }
+    .domen__link {
+        word-break: break-all;
+    }
+    .domen__item-link {
+        margin-bottom: 10px;
+    }
+    .domen__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    .domen__item-right {
+        margin-top: 15px;
+    }
+    .domen__input {
+        width: 100%;
+    }
+    .domen__item-left {
+        width: 100%;
+    }
+    .domen__item-right {
+        width: 215px;
+        margin-top: 15px;
+    }
+    .domen__btn {
+        display: block;
+        width: 215px;
+        margin: 0 auto;
+    }
+    .domen__btn-item {
+        width: 213px;
+        margin: 0 auto;
+        margin-bottom: 5px;
     }
     .stylePage__button {
         flex-direction: column;
@@ -200,10 +290,10 @@
         right: 10px;
         z-index: 10;
     }
-    .btn-big{
+    .btn-big {
         padding: 10px 20px;
     }
-    .buttons-elements{
+    .buttons-elements {
         flex-direction: column;
         width: 150px;
         margin: 0 auto;
@@ -213,3 +303,30 @@
         }
     }
 }
+
+// =========== ПО ВЫСОТЕ =============
+@media (max-height: 570px) {
+    .modal__information {
+        height: 500px;
+    }
+}
+@media (max-height: 420px) {
+    .modal__information {
+        height: 395px;
+    }
+}
+@media (max-height: 380px) {
+    .modal__information {
+        height: 355px;
+    }
+}
+@media (max-height: 325px) {
+    .modal__information {
+        height: 300px;
+    }
+}
+// @media only screen and (max-height: 570px) {
+//     .modal__information {
+//         height: 500px;
+//     }
+// }

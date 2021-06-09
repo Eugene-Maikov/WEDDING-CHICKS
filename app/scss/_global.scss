@@ -19,7 +19,7 @@ body.no-scroll {
 .container-fluid {
   padding: 0 15px;
 }
-.content {
+.MainContent {
   display: flex;
   align-items: flex-start;
 }
@@ -302,6 +302,17 @@ input[type="checkbox"].toggle:checked + label::before {
 .form__item-question {
   position: relative;
 }
+// ========= Всалывающая подсказка ==============
+.question-icon {
+  outline: none;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  display: inline;
+  margin-bottom: -3px;
+}
+//------------------------------------------------
 .box-map {
   transform: scale(0);
   position: absolute;
@@ -322,7 +333,9 @@ input[type="checkbox"].toggle:checked + label::before {
   display: block;
   transform: scale(1);
 }
-.question-icon {
+//------------------------------------------------
+.question-icon1,
+.question-icon2 {
   outline: none;
   position: relative;
   width: 15px;
@@ -330,7 +343,36 @@ input[type="checkbox"].toggle:checked + label::before {
   cursor: pointer;
   display: inline;
   margin-bottom: -3px;
+  margin-left: 3px;
 }
+.box__info1,
+.box__info2 {
+  transform: scale(0);
+  position: absolute;
+
+  width: 300px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+  top: -28px;
+  left: 231px;
+  font-size: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+.box__info2 {
+  top: 6px;
+  right: 54px;
+}
+.box__info1--active,
+.box__info2--active {
+  display: block;
+  transform: scale(1);
+}
+
+//====================================================
 .btn-delete {
   width: 15px;
   margin-bottom: -3px;
@@ -341,6 +383,7 @@ input[type="checkbox"].toggle:checked + label::before {
   margin-left: 10px;
   padding: 5px 20px;
 }
+
 // ======== Подтвердите удаление ================
 .box__delete {
   background-color: #fff;
@@ -419,16 +462,29 @@ input[type="checkbox"].toggle:checked + label::before {
 
 //======================== Модальное окно ====================
 .modal__information {
-  width: 800px;
+  display: none;
+  width: 630px;
   margin: 0 auto;
   position: absolute;
-  z-index: 1002;
-  top: 100px;
+  z-index: 1020;
+  position: fixed;
+  // top: 50px;
   background-color: #fff;
   margin: 20px;
   padding: 24px;
-  border: 1px solid #000;
+  border: none;
+  overflow-y: auto;
   border-radius: 5px;
+  transition: all 0.3s ease;
+
+  top: 50%;
+  left: 50%;
+  z-index: 1020;
+  transform: translate(-50%, -50%);
+
+  &-active {
+    display: block;
+  }
 }
 .modal__information-title {
   text-transform: uppercase;
@@ -474,7 +530,7 @@ input[type="checkbox"].toggle:checked + label::before {
   display: inline-block;
   border-radius: 50%;
   width: 17px;
-  height: 18px;
+  height: 17px;
   position: absolute;
   left: 0;
   bottom: 1px;
@@ -483,5 +539,211 @@ input[type="checkbox"].toggle:checked + label::before {
 }
 /* Checked */
 .modal__information-radio input[type="radio"]:checked + label:before {
-  background-color: green;
+  content: "\2713";
+  color: #fff;
+  background-color: #000;
+  padding-left: 3px;
+  font-size: 12px;
+}
+//  ===== Вкладки ========
+.modal__information-tab {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.modal__information-tab input[type="radio"] {
+  display: none;
+}
+.modal__information-tab label {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  padding: 0px 15px;
+  line-height: 34px;
+  border: none;
+}
+.modal__information-tab .modal__information-tabItem label {
+  border-radius: 6px;
+  margin-left: 10px;
+}
+/* Checked */
+.modal__information-tab input[type="radio"]:checked + label {
+  background: $pink;
+  color: #fff;
+}
+
+//====================================================================
+.modal__information-tab::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+}
+.info__group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &-active {
+    display: block;
+  }
+}
+.info__title-formInner {
+  display: flex;
+  .info__title-formItem {
+    margin-right: 10px;
+  }
+  .info__title-formItem:last-child {
+    margin-right: 0;
+  }
+}
+.info__date-formInner {
+  display: flex;
+  .info__date-formItem {
+    width: 33.33333%;
+  }
+}
+.questionMenu {
+  display: none;
+  margin-bottom: 20px;
+}
+.addUsers {
+  margin-top: 15px;
+}
+.addUsers__label {
+  font-size: 12px;
+  font-weight: 700;
+}
+.addUsers__group {
+  display: flex;
+  align-items: center;
+}
+.addUsers__button {
+  margin: 10px 0 5px;
+}
+.addUsers__btn {
+  margin-left: 10px;
+  padding: 8px 40px;
+}
+.ask__radio-title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.info__ack1-formInner {
+  display: flex;
+  .info__ack1-formItem {
+    width: 50%;
+    margin-right: 10px;
+  }
+  .info__ack1-formItem:last-child {
+    margin-right: 0;
+  }
+}
+.info__ack1-add {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: $pink;
+}
+.info__ack2 {
+  display: none;
+}
+.info__ask-checkbox {
+  margin-top: 5px;
+}
+//  ===== Выбор ответа ========
+.ask {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.ask__radio input[type="radio"] {
+  display: none;
+}
+.ask__radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+}
+.ask__radio {
+  margin-left: 20px;
+}
+
+.ask__radio label:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 1px solid #000;
+  transition: all 0.2s ease;
+}
+/* Checked */
+.ask__radio input[type="radio"]:checked + label:before {
+  content: "\2713";
+  color: #fff;
+  background-color: #000;
+  padding-left: 3px;
+  font-size: 12px;
+}
+
+//  ===== Выбор ответа (checkbox) ========
+
+.info__ask-checkbox input[type="checkbox"] {
+  display: none;
+}
+.info__ask-checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+}
+.info__ask-checkbox label:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 1px solid #000;
+  transition: all 0.2s ease;
+}
+/* Checked */
+.info__ask-checkbox input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  color: #fff;
+  background-color: #000;
+  padding-left: 3px;
+  font-size: 12px;
+}
+
+//Выпадающий список
+.form__list {
+  margin-top: 10px;
+  width: 100%;
+  outline: 0;
+  color: #495057;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+.form__list-item {
+  padding: 10px 0;
+}
+.modal__information-close {
+  width: 15px;
+  float: right;
 }

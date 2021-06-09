@@ -16,6 +16,9 @@
 .webadress {
     background-color: #f5f5f5;
     padding: 20px;
+    &-notActive{
+        display: none;
+    }
 }
 .webadress__link {
     outline: 0;
@@ -28,6 +31,75 @@
     margin-top: 20px;
     display: flex;
     justify-content: flex-end;
+}
+
+//=====================================
+.domen {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: none;
+    &-active{
+        display: block;
+    }
+    &__suptitle {
+        font-size: 11px;
+        margin-bottom: 15px;
+        span {
+            font-weight: 500;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+    &__inner-container{
+        display: flex;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    &__link {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        color: #000;
+        line-height: 2;
+    }
+    &__item {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__item-left{
+        width: 70%;
+    }
+    &__item-right{
+        min-width: 215px;
+        width: 30%;
+    }
+    
+    &__input {
+        outline: 0;
+        color: #495057;
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+        width: 100%;
+        &:focus {
+            border: 1px solid #000;
+        }
+    }
+    &__availability{
+        // min-width: 215px;
+        width: 100%;
+    }
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+        &-item {
+            margin-left: 10px;
+        }
+    }
 }
 
 //=====================================
@@ -506,40 +578,31 @@ input[type="file"] {
         margin-right: 10px;
     }
 }
-.timing__buttons{
+.timing__buttons {
     display: flex;
     justify-content: flex-end;
-    .btn-timing{
+    .btn-timing {
         margin-left: 10px;
     }
 }
-.form__edit{
+.form__edit {
     display: none;
-    &-active{
+    &-active {
         display: block;
     }
 }
 // ==================================================================================
 // =============================== RSVP =============================================
 // ==================================================================================
-.info__list{
+.info__list {
     margin-bottom: 20px;
-    &-step{
+    &-step {
         padding-left: 15px;
         padding-top: 5px;
-        span{
+        span {
             font-weight: 700;
         }
     }
 }
-
-
-
-
-
-
-
-
-
 
 @import "media";
