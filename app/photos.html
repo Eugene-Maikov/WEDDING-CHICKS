@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header__button">
+      <div class="container">
+        <div class="top__btn">
+          <button class="top__btn-demo btn btn-sm" href="#" type="button">просмотр демо-сайта</button>
+          <button class="top__btn-site btn btn-sm" href="#" type="button">просмотр демо-сайта</button>
+        </div>
+      </div>
+    </div>
+    <div class="MainContent">
+      <div class="modal"></div>
+      <aside class="aside">
+        <button class="btn btn-pink">управление контентом</button>
+        <h4 class="aside__title">редактирование страниц</h4>
+        <div class="aside__list">
+          <div class="aside__list-item">Добро пожаловать</div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Люди</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-1" checked>
+              <label class="switch-1" for="switch-1" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Расписание</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-2" checked>
+              <label class="switch-2" for="switch-2" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">RSVP</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-3" checked>
+              <label class="switch-3" for="switch-3" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Размещение</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-4" checked>
+              <label class="switch-4" for="switch-4" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Реестр</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-5" checked>
+              <label class="switch-5" for="switch-5" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Фотографии</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-6" checked>
+              <label class="switch-6" for="switch-6" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Путешествия</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-7" checked>
+              <label class="switch-7" for="switch-7" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Чем заняться</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-8" checked>
+              <label class="switch-8" for="switch-8" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-pink">конструкция выключателя</button>
+        <p class="aside__title">Ваши кости</p>
+        <div class="aside__info">
+          <p class="aside__info-first">Трек RSVPS</p>
+          <p class="aside__info-second">Сбор Физических Адресов</p>
+        </div>
+      </aside>
+      <div class="menu">
+        <button class="nav-toggle" id="nav_toggle" type="button">
+          <span class="nav-toggle__item">Menu</span>
+        </button>
+      </div>
+      <main class="main">
+        <div class="photos">
+          <form class="photos__form" action="/">
+            <div class="section-info photos-info">
+              <div class="top__info">
+                <div class="container-fluid">
+                  <h2 class="info__title">ФОТОГРАФИИ</h2>
+                </div>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ЗАГОЛОВОК ФОТОГРАФИЙ</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="form__item form__item-question">
+                  <label class="form__label form__label-placing">ФОТОГРАФИИ ВВОДНОГО ТЕКСТА <span
+                      class="placing-span">(если вы не хотите никакого текста, просто сотрите и оставьте
+                      пустым)</span></label>
+                  <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
+                </div>
+                <div class="placing__form-btn">
+                  <button class="btn btn-dark" type="submit">Сохранить</button>
+                </div>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="photo">
+                  <div class="photo__container">
+                    <div class="photo__download">
+                      <img class="photo__img" src="images/photo.png" alt="photo">
+                      <div class="people__buttons">
+                        <div class="input__images-item">
+                          <input class="form__input input__images" id="file" accept="image/*" type="file">
+                          <label class="label__file" for="file">Загрузить</label>
+                        </div>
+                        <div class="input__images-item">
+                          <button class="btn-download">ссылка на инстаграм</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="photo__text">Вы можете загрузить JPG, GIF или PNG (ограничение размера файла-10 МБ)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
