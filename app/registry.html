@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header__button">
+      <div class="container">
+        <div class="top__btn">
+          <button class="top__btn-demo btn btn-sm" href="#" type="button">просмотр демо-сайта</button>
+          <button class="top__btn-site btn btn-sm" href="#" type="button">просмотр демо-сайта</button>
+        </div>
+      </div>
+    </div>
+    <div class="MainContent">
+      <div class="modal"></div>
+      <aside class="aside">
+        <button class="btn btn-pink">управление контентом</button>
+        <h4 class="aside__title">редактирование страниц</h4>
+        <div class="aside__list">
+          <div class="aside__list-item">Добро пожаловать</div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Люди</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-1" checked>
+              <label class="switch-1" for="switch-1" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Расписание</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-2" checked>
+              <label class="switch-2" for="switch-2" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">RSVP</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-3" checked>
+              <label class="switch-3" for="switch-3" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Размещение</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-4" checked>
+              <label class="switch-4" for="switch-4" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Реестр</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-5" checked>
+              <label class="switch-5" for="switch-5" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Фотографии</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-6" checked>
+              <label class="switch-6" for="switch-6" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Путешествия</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-7" checked>
+              <label class="switch-7" for="switch-7" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+          <div class="aside__list-item">
+            <a class="aside__list-text" href="#">Чем заняться</a>
+            <div class="aside__list-switch">
+              <input class="toggle" type="checkbox" id="switch-8" checked>
+              <label class="switch-8" for="switch-8" data-checked="ON" data-unchecked="OFF"></label>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-pink">конструкция выключателя</button>
+        <p class="aside__title">Ваши кости</p>
+        <div class="aside__info">
+          <p class="aside__info-first">Трек RSVPS</p>
+          <p class="aside__info-second">Сбор Физических Адресов</p>
+        </div>
+      </aside>
+      <div class="menu">
+        <button class="nav-toggle" id="nav_toggle" type="button">
+          <span class="nav-toggle__item">Menu</span>
+        </button>
+      </div>
+      <main class="main">
+        <div class="registry">
+          <form class="form__registry" action="/">
+            <div class="section-info">
+              <div class="top__info">
+                <div class="container-fluid">
+                  <h2 class="info__title">РЕЕСТР</h2>
+                </div>
+              </div>
+              <div class="container-fluid">
+                <p class="info__text">
+                  Автоматически свяжите свой реестр свадебных цыплят здесь,
+                  чтобы гости могли приобрести подарки непосредственно с вашего
+                  свадебного сайта, переключив нижеприведенный переключатель вправо.
+                </p>
+              </div>
+            </div>
+            <div class="registry__title">
+              <span>ССЫЛКА СВАДЕБНЫЙ РЕЕСТР ЦЫПЛЯТ</span>
+            </div>
+            <div class="registry__switch">
+              <div class="aside__list-switch">
+                <input class="toggle" type="checkbox" id="switch-registry">
+                <label class="switch-registry" for="switch-registry" data-checked="ON" data-unchecked="OFF"></label>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ЗАГОЛОВОК РЕЕСТРА</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="form__item form__item-question">
+                  <label class="form__label form__label-placing">ВВОДНЫЙ ТЕКСТ РЕЕСТРА</label>
+                  <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
+                </div>
+                <div class="placing__form-btn">
+                  <button class="btn btn-dark" type="submit">Сохранить</button>
+                </div>
+              </div>
+            </div>
+            <div class="section-info">
+              <div class="top__info">
+                <div class="container-fluid">
+                  <h2 class="info__title">ДОБАВИТЬ ДРУГИЕ РЕЕСТРЫ</h2>
+                </div>
+              </div>
+              <div class="container-fluid">
+                <p class="info__text">
+                  Просто скопируйте и вставьте ссылку из других ваших 
+                  свадебных реестров ниже, чтобы гости могли легко посетить все ваши
+                  свадебные реестры.
+                </p>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="placing__form-btn mt15">
+                  <button class="btn btn-dark" type="submit">Сохранить</button>
+                </div>
+              </div>
+            </div>
+            <div class="section-info">
+              <div class="top__info">
+                <div class="container-fluid">
+                  <h2 class="info__title">ДРУГИЕ ВАШИ РЕЕСТРЫ</h2>
+                </div>
+              </div>
+              <div class="container-fluid">
+                <p class="info__text">
+                  Если у вас есть правки, внесите их и нажмите сохранить. 
+                  Если вы хотите изменить порядок своих реестров, используйте
+                  стрелки справа.
+                </p>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="timing__buttons placing__buttons">
+                  <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete" src="images/delete.svg" alt="">
+                    Удалить</button>
+                  <button class="btn btn-dark btn-edit">Сохранить</button>
+                </div>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="timing__buttons placing__buttons">
+                  <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete" src="images/delete.svg" alt="">
+                    Удалить</button>
+                  <button class="btn btn-dark btn-edit">Сохранить</button>
+                </div>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="timing__buttons placing__buttons">
+                  <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete" src="images/delete.svg" alt="">
+                    Удалить</button>
+                  <button class="btn btn-dark btn-edit">Сохранить</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal">
+              <div class="box__delete">
+                <div class="box__delete-icon">
+                  <img class="box__delete-close" src="images/close.svg" alt="">
+                </div>
+                <h3 class="box__title">Вы уверены, что хотите удалить это событие?</h3>
+                <p class="box__text">Это событие будет удалено навсегда. Вы не можете отменить это действие.
+                </p>
+                <div class="timing__buttons-delete">
+                  <button class="btn btn-dark box__delete-btn button__delete-cloce">ОТМЕНА</button>
+                  <button class="btn btn-pink box__delete-btn">УДАЛИТЬ</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </form>
+        </div>
+
+
+
+      </main>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
