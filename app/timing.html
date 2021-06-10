@@ -153,7 +153,7 @@
                                     <input class="form__input form__input-welcom" type="text" placeholder="Индекс">
                                 </div>
                             </div>
-                            <div class="box-map">
+                            <div class="box-map1">
                                 <ol>
                                     <li>В Google Maps нажмите значок "Поделиться".</li>
                                     <li>На вкладке "Отправить ссылку" скопируйте предоставленную ссылку.</li>
@@ -167,10 +167,10 @@
                             </div>
                             <div class="form__item form__item-question">
                                 <label class="form__label form__label-welcome">ПОДЕЛИТЕСЬ НАПРАВЛЕНИЕМ <span>GOOGLE MAP
-                                        <img class="question-icon" src="images/question.svg" alt=""></span></label>
+                                        <img class="question-iconMap1" src="images/question.svg" alt=""></span></label>
                                 <input class="form__input form__input-welcom" type="text">
                             </div>
-                            
+
                             <div class="form__item">
                                 <label class="form__label form__label-welcome">ПРИМЕЧАНИЕ О МЕРОПРИЯТИИ (чего могут
                                     ожидать ваши гости или какой может быть дресс-код)</label>
@@ -184,104 +184,109 @@
                     </div>
                 </form>
 
-                <section class="section-info">
-                    <div class="top__info">
+                <form action="/">
+                    <section class="section-info">
+                        <div class="top__info">
+                            <div class="container-fluid">
+                                <h2 class="info__title">ВАШЕ МЕРОПРИЯТИЕ</h2>
+                            </div>
+                        </div>
                         <div class="container-fluid">
-                            <h2 class="info__title">ВАШЕ МЕРОПРИЯТИЕ</h2>
+                            <p class="info__text">
+                                Если у вас есть правки, сделайте их и нажмите Сохранить. Если вы хотите изменить порядок
+                                ваших событий, используйте
+                                стрелки справа.
+                            </p>
                         </div>
-                    </div>
-                    <div class="container-fluid">
-                        <p class="info__text">
-                            Если у вас есть правки, сделайте их и нажмите Сохранить. Если вы хотите изменить порядок
-                            ваших событий, используйте
-                            стрелки справа.
-                        </p>
-                    </div>
-                </section>
-                <div class="form__welcome-group">
-                    <div class="container-fluid">
-                        <div class="form__item form__item-top">
-                            <label class="form__label form__label-welcome">НАЗВАНИЕ СОБЫТИЯ</label>
-                            <input class="form__input form__input-welcom" type="text">
-                        </div>
-                        <div class="form__edit">
-                            <div class="form__timing">
-                                <div class="form__timing-date">
-                                    <label class="form__label form__label-welcome">ДАТА СОБЫТИЯ</label>
-                                    <input class="form__input form__input-welcom" type="date" placeholder="Выберете дату">
-                                </div>
-                                <div class="form__timing-time">
-                                    <label class="form__label form__label-welcome">ВРЕМЯ СОБЫТИЯ</label>
-                                    <input class="form__input form__input-welcom" type="time" placeholder="Выберете время">
-                                </div>
-                            </div>
-                            <div class="form__item">
-                                <label class="form__label form__label-welcome">НАЗВАНИЕ МЕСТА ПРОВЕДЕНИЯ</label>
+                    </section>
+                    <div class="form__welcome-group">
+                        <div class="container-fluid">
+                            <div class="form__item form__item-top">
+                                <label class="form__label form__label-welcome">НАЗВАНИЕ СОБЫТИЯ</label>
                                 <input class="form__input form__input-welcom" type="text">
                             </div>
-                            <div class="form__item">
-                                <label class="form__label form__label-welcome">АДРЕС УЛИЦЫ</label>
-                                <input class="form__input form__input-welcom" type="text">
-                            </div>
-                            <div class="form__place">
-                                <div class="form__place-city">
-                                    <label class="form__label form__label-welcome">ГОРОД</label>
-                                    <input class="form__input form__input-welcom" type="text" placeholder="Город">
+                            <div class="form__edit">
+                                <div class="form__timing">
+                                    <div class="form__timing-date">
+                                        <label class="form__label form__label-welcome">ДАТА СОБЫТИЯ</label>
+                                        <input class="form__input form__input-welcom" type="date"
+                                            placeholder="Выберете дату">
+                                    </div>
+                                    <div class="form__timing-time">
+                                        <label class="form__label form__label-welcome">ВРЕМЯ СОБЫТИЯ</label>
+                                        <input class="form__input form__input-welcom" type="time"
+                                            placeholder="Выберете время">
+                                    </div>
                                 </div>
-                                <div class="form__place-state">
-                                    <label class="form__label form__label-welcome">ГОСУДАРСТВО</label>
-                                    <input class="form__input form__input-welcom" type="text" placeholder="Государство">
+                                <div class="form__item">
+                                    <label class="form__label form__label-welcome">НАЗВАНИЕ МЕСТА ПРОВЕДЕНИЯ</label>
+                                    <input class="form__input form__input-welcom" type="text">
                                 </div>
-                                <div class="form__place-index">
-                                    <label class="form__label form__label-welcome">Индекс</label>
-                                    <input class="form__input form__input-welcom" type="text" placeholder="Индекс">
+                                <div class="form__item">
+                                    <label class="form__label form__label-welcome">АДРЕС УЛИЦЫ</label>
+                                    <input class="form__input form__input-welcom" type="text">
+                                </div>
+                                <div class="form__place">
+                                    <div class="form__place-city">
+                                        <label class="form__label form__label-welcome">ГОРОД</label>
+                                        <input class="form__input form__input-welcom" type="text" placeholder="Город">
+                                    </div>
+                                    <div class="form__place-state">
+                                        <label class="form__label form__label-welcome">ГОСУДАРСТВО</label>
+                                        <input class="form__input form__input-welcom" type="text"
+                                            placeholder="Государство">
+                                    </div>
+                                    <div class="form__place-index">
+                                        <label class="form__label form__label-welcome">Индекс</label>
+                                        <input class="form__input form__input-welcom" type="text" placeholder="Индекс">
+                                    </div>
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label form__label-welcome">ВЕБ-САЙТ</label>
+                                    <input class="form__input form__input-welcom" type="text">
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label form__label-welcome">ПОДЕЛИТЕСЬ НАПРАВЛЕНИЕМ <span>GOOGLE
+                                            MAP
+                                            <img class="question-iconMap2" src="images/question.svg" alt=""></span></label>
+                                    <input class="form__input form__input-welcom" type="text">
+                                </div>
+                                <div class="box-map2">
+                                    <ol>
+                                        <li>В Google Maps нажмите значок "Поделиться".</li>
+                                        <li>На вкладке "Отправить ссылку" скопируйте предоставленную ссылку.</li>
+                                        <li>Вставьте ссылку Google Maps в поле ниже.</li>
+                                        <li>Когда закончите, нажмите кнопку "Сохранить".</li>
+                                    </ol>
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label form__label-welcome">ПРИМЕЧАНИЕ О МЕРОПРИЯТИИ (чего могут
+                                        ожидать ваши гости или какой может быть дресс-код)</label>
+                                    <textarea class="form__textarea" name="input-text"></textarea>
                                 </div>
                             </div>
-                            <div class="form__item">
-                                <label class="form__label form__label-welcome">ВЕБ-САЙТ</label>
-                                <input class="form__input form__input-welcom" type="text">
+                            <div class="timing__buttons">
+                                <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete"
+                                        src="images/delete.svg" alt=""> Удалить</button>
+                                <button class="btn btn-dark btn-edit button__delete-edit">Изменить</button>
                             </div>
-                            <div class="form__item">
-                                <label class="form__label form__label-welcome">ПОДЕЛИТЕСЬ НАПРАВЛЕНИЕМ <span>GOOGLE
-                                        MAP
-                                        <img class="question-icon" src="images/question.svg" alt=""></span></label>
-                                <input class="form__input form__input-welcom" type="text">
-                            </div>
-                            <div class="box-map">
-                                <ol>
-                                    <li>В Google Maps нажмите значок "Поделиться".</li>
-                                    <li>На вкладке "Отправить ссылку" скопируйте предоставленную ссылку.</li>
-                                    <li>Вставьте ссылку Google Maps в поле ниже.</li>
-                                    <li>Когда закончите, нажмите кнопку "Сохранить".</li>
-                                </ol>
-                            </div>
-                            <div class="form__item">
-                                <label class="form__label form__label-welcome">ПРИМЕЧАНИЕ О МЕРОПРИЯТИИ (чего могут
-                                    ожидать ваши гости или какой может быть дресс-код)</label>
-                                <textarea class="form__textarea" name="input-text"></textarea>
-                            </div>
-                        </div>
-                        <div class="timing__buttons">
-                            <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete"
-                                    src="images/delete.svg" alt=""> Удалить</button>
-                            <button class="btn btn-dark btn-edit button__delete-edit">Изменить</button>
                         </div>
                     </div>
-                </div>
-                <div class="modal">
-                    <div class="box__delete">
-                        <div class="box__delete-icon">
-                            <img class="box__delete-close" src="images/close.svg" alt="">
-                        </div>
-                        <h3 class="box__title">Вы уверены, что хотите удалить это событие?</h3>
-                        <p class="box__text">Это событие будет удалено навсегда. Вы не можете отменить это действие.</p>
-                        <div class="timing__buttons-delete">
-                            <button class="btn btn-dark box__delete-btn button__delete-cloce">ОТМЕНА</button>
-                            <button class="btn btn-pink box__delete-btn">УДАЛИТЬ</button>
+                    <div class="modal">
+                        <div class="box__delete">
+                            <div class="box__delete-icon">
+                                <img class="box__delete-close" src="images/close.svg" alt="">
+                            </div>
+                            <h3 class="box__title">Вы уверены, что хотите удалить это событие?</h3>
+                            <p class="box__text">Это событие будет удалено навсегда. Вы не можете отменить это действие.
+                            </p>
+                            <div class="timing__buttons-delete">
+                                <button class="btn btn-dark box__delete-btn button__delete-cloce">ОТМЕНА</button>
+                                <button class="btn btn-pink box__delete-btn">УДАЛИТЬ</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
+                </form>
 
 
 

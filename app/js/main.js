@@ -20,29 +20,35 @@ $(function () {
 
         //модальное окно "Вы действительно хотите удалить запись?"
         $(".box__delete-press").on("click", function () {
+            event.preventDefault();
             $(".modal").addClass("show");
             $(".box__delete").addClass("box__delete-active");
             $(".box__delete").addClass("box__delete-active");
             $("body").addClass('no-scroll');
         }),
         $(".box__delete-close").on("click", function () {
+            event.preventDefault();
             $(".modal").removeClass("show");
             $(".box__delete").removeClass("box__delete-active");
             $("body").removeClass('no-scroll');
         }),
         $(".button__delete-cloce").on("click", function () {
+            event.preventDefault();
             $(".modal").removeClass("show");
             $(".box__delete").removeClass("box__delete-active");
             $("body").removeClass('no-scroll');
         }),
         $(".modal").on("click", function () {
+            event.preventDefault();
             $(".modal").removeClass("show");
             $(".box__delete").removeClass("box__delete-active");
             $("body").removeClass('no-scroll');
         }),
 
         $(".button__delete-edit").on("click", function () {
+            event.preventDefault();
             $(".form__edit").addClass("form__edit-active");
+            $(".placing__buttons").addClass("placing__buttons-notActive");
         }),
 
         //Модальное окно "Добавить событие"
@@ -159,8 +165,23 @@ $(function () {
 
     //всплываюзие черные подсказки
     $(document).ready(function () {
-        $(".question-icon").hover(function () { // задаем функцию при наведении курсора на элемент и при его отведении	
-            $(".box__map ").toggleClass("box__map--active") // добавляем, или убираем класс у текущего элемента div
+        $(".question-iconMap1").hover(function () { // задаем функцию при наведении курсора на элемент и при его отведении	
+            $(".box-map1 ").toggleClass("box-map1--active") // добавляем, или убираем класс у текущего элемента div
+        });
+    });
+    $(document).ready(function () {
+        $(".question-iconMap2").hover(function () { // задаем функцию при наведении курсора на элемент и при его отведении	
+            $(".box-map2 ").toggleClass("box-map2--active") // добавляем, или убираем класс у текущего элемента div
+        });
+    });
+    $(document).ready(function () {
+        $(".question-iconMap3").hover(function () { // задаем функцию при наведении курсора на элемент и при его отведении	
+            $(".box-map3 ").toggleClass("box-map3--active") // добавляем, или убираем класс у текущего элемента div
+        });
+    });
+    $(document).ready(function () {
+        $(".question-iconMap4").hover(function () { // задаем функцию при наведении курсора на элемент и при его отведении	
+            $(".box-map4 ").toggleClass("box-map4--active") // добавляем, или убираем класс у текущего элемента div
         });
     });
     $(document).ready(function () {

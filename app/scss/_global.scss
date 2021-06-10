@@ -303,7 +303,10 @@ input[type="checkbox"].toggle:checked + label::before {
   position: relative;
 }
 // ========= Всалывающая подсказка ==============
-.question-icon {
+.question-iconMap1,
+.question-iconMap2,
+.question-iconMap3,
+.question-iconMap4 {
   outline: none;
   position: relative;
   width: 15px;
@@ -313,11 +316,15 @@ input[type="checkbox"].toggle:checked + label::before {
   margin-bottom: -3px;
 }
 //------------------------------------------------
-.box-map {
+.box-map1,
+.box-map2,
+.box-map3,
+.box-map4 {
   transform: scale(0);
   position: absolute;
 
   width: 300px;
+
   background-color: #000;
   color: #fff;
   border-radius: 5px;
@@ -326,10 +333,20 @@ input[type="checkbox"].toggle:checked + label::before {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.3s ease;
 }
-.box-map ol {
+.box-map1 {
+  bottom: 85px;
+}
+
+.box-map1 ol,
+.box-map2 ol,
+.box-map3 ol,
+.box-map4 ol {
   padding-left: 10px;
 }
-.box-map--active {
+.box-map1--active,
+.box-map2--active,
+.box-map3--active,
+.box-map4--active {
   display: block;
   transform: scale(1);
 }
@@ -365,6 +382,9 @@ input[type="checkbox"].toggle:checked + label::before {
 .box__info2 {
   top: 6px;
   right: 54px;
+}
+.box__info1 {
+  top: 117px;
 }
 .box__info1--active,
 .box__info2--active {
@@ -652,6 +672,7 @@ input[type="checkbox"].toggle:checked + label::before {
 .info__ask-checkbox {
   margin-top: 5px;
 }
+
 //  ===== Выбор ответа ========
 .ask {
   margin: 20px;
@@ -746,4 +767,7 @@ input[type="checkbox"].toggle:checked + label::before {
 .modal__information-close {
   width: 15px;
   float: right;
+}
+.mt0 {
+  margin-top: 0;
 }

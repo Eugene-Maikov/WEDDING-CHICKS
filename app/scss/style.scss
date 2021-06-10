@@ -605,4 +605,43 @@ input[type="file"] {
     }
 }
 
+
+// ==================================================================================
+// =============================== Placing =============================================
+// ==================================================================================
+.form__textarea-placing{
+    margin-bottom: 15px;
+}
+.form__label-placing {
+    text-transform: inherit;
+    font-size: 12px;
+    font-weight: 700;
+}
+.placing__form-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.placing__title{
+    text-align: left;
+    font-weight: 400;
+    font-size: 21px;
+    background-color: #f5f5f5;
+}
+.placing__form{
+    margin-top: 10px;
+}
+.placing__buttons{
+    &-notActive{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
 @import "media";
