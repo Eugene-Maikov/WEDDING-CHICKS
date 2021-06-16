@@ -106,7 +106,6 @@ body.no-scroll {
 .menu__burger-icon {
   display: none;
 }
-
 // =========================================
 input[type="checkbox"].toggle {
   display: none;
@@ -207,7 +206,7 @@ input[type="checkbox"].toggle:checked + label::before {
   height: 100%;
   padding: 15px;
   overflow: auto;
-  background-color: rgba(76, 78, 82, 0.2);
+  background-color: rgba(76, 78, 82, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -413,48 +412,6 @@ input[type="checkbox"].toggle:checked + label::before {
   visibility: visible;
 }
 
-//------------------------------------------------
-// .question-icon1,
-// .question-icon2 {
-//   outline: none;
-//   position: relative;
-//   width: 15px;
-//   height: 15px;
-//   cursor: pointer;
-//   display: inline;
-//   margin-bottom: -3px;
-//   margin-left: 3px;
-// }
-// .box__info1,
-// .box__info2 {
-//   transform: scale(0);
-//   position: absolute;
-
-//   width: 300px;
-//   background-color: #000;
-//   color: #fff;
-//   border-radius: 5px;
-//   padding: 10px;
-//   z-index: 1000;
-//   top: -28px;
-//   left: 231px;
-//   font-size: 12px;
-//   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-//   transition: all 0.3s ease;
-// }
-// .box__info2 {
-//   top: 6px;
-//   right: 54px;
-// }
-// .box__info1 {
-//   top: 117px;
-// }
-// .box__info1--active,
-// .box__info2--active {
-//   display: block;
-//   transform: scale(1);
-// }
-
 //====================================================
 .btn-delete {
   width: 15px;
@@ -502,9 +459,7 @@ input[type="checkbox"].toggle:checked + label::before {
     padding: 5px 20px;
   }
 }
-.box__delete-active {
-  transform: scale(1);
-}
+
 //==============================
 .pink__link {
   color: $pink;
@@ -834,6 +789,194 @@ input[type="checkbox"].toggle:checked + label::before {
 .mt0 {
   margin-top: 0;
 }
-.mt15{
+.mt15 {
   margin-top: 15px;
 }
+.dn {
+  display: block;
+  &-active {
+    display: none;
+  }
+}
+
+// ==================== Всплывающее окно (подтвердить удаление) ===================
+// POPUP
+.popup-fade {
+  display: none;
+}
+.popup-fade:before {
+  content: "";
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: 9999;
+}
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  padding: 20px 30px;
+  width: 450px;
+  margin-left: -200px;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 99999;
+  opacity: 1;
+}
+.popup-close img {
+  width: 15px;
+}
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+// Контент внутри POPUP
+.popup__title {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+.popup__text {
+  margin-top: 10px;
+  color: #6c757d;
+}
+.popup__buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.popup__btn {
+  padding: 5px 20px;
+  font-size: 12px;
+}
+.ml15 {
+  margin-left: 15px;
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.deleteParty{
+  cursor: pointer;
+  background-color: transparent;
+}
+.button__save-edit{
+  display: none;
+  &-active{
+    display: block;
+  }
+}
+.button__delete-edit{
+  &-notActive{
+    display: none;
+  }
+}
+
+// ========= Валидация обязательых форм ===========
+.error {
+  color: #dc3545;
+  margin-left: 5px;
+}
+
+
+// ============== Всплывашка сохранения  =========================
+#inline-popups{
+  display: none;
+}
+.save-popup {
+  position: relative;
+  background-color: $pink;
+  padding: 25px;
+  width:auto;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  max-width: 358px;
+  margin: 0 auto; 
+}
+
+.mfp-move-horizontal {
+  .mfp-content {
+   vertical-align:top; 
+   margin-top: 30px;
+  }
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s;
+    
+    transform: translateY(-50px);
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.3s;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    
+    .mfp-with-anim {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+    
+  }
+  
+}
+
+@keyframes hinge {
+	0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }	
+	20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
+	40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
+	80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; }	
+	100% { transform: translateY(700px); opacity: 0; }
+}
+
+.hinge {
+  animation-duration: 1s;
+	animation-name: hinge;
+}
+.mfp-with-fade {
+  // before-open state
+  .mfp-content,
+  &.mfp-bg {
+    opacity: 0;
+    transition: opacity .5s ease-out;
+  }
+  // open state
+  &.mfp-ready {
+    .mfp-content {
+    opacity: 1; 
+    }
+  }
+  .mfp-move-horizontal.mfp-ready.mfp-bg{
+    opacity: 0;
+  }
+  // closed state
+  &.mfp-removing {
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}
+
+
+
+

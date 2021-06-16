@@ -18,7 +18,7 @@ $(function () {
       $(".domen").removeClass("domen-active");
     }),
 
-    //модальное окно "Вы действительно хотите удалить запись?"
+    //модальное окно "Вы действительно хотите удалить ЗАПИСЬ?"
     $(".box__delete-press").on("click", function () {
       event.preventDefault();
       $(".modal").addClass("show");
@@ -38,18 +38,46 @@ $(function () {
       $(".box__delete").removeClass("box__delete-active");
       $("body").removeClass('no-scroll');
     }),
-    $(".modal").on("click", function () {
-      event.preventDefault();
-      $(".modal").removeClass("show");
-      $(".box__delete").removeClass("box__delete-active");
-      $("body").removeClass('no-scroll');
-    }),
 
-    $(".button__delete-edit").on("click", function () {
-      event.preventDefault();
-      $(".form__edit").addClass("form__edit-active");
-      $(".placing__buttons").addClass("placing__buttons-notActive");
-    }),
+    // ================== Всплывающее окно (удаление фото) ==========================================
+    $('.popup-open').click(function () {
+      $('.popup-fade').fadeIn(100);
+      // $('.popup-fade').slideUp(300);
+      $("body").addClass('no-scroll');
+      return false;
+    });
+  // Клик по ссылке "Закрыть".
+  $('.popup-close, .popup-close-btn').click(function () {
+    $(this).parents('.popup-fade').fadeOut(100);
+    // $(this).parents('.popup-fade').slideDown("slow");
+    $("body").removeClass('no-scroll');
+    return false;
+  });
+  // Закрытие по клавише Esc.
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $('.popup-fade').fadeOut(100);
+      $("body").removeClass('no-scroll');
+    }
+  });
+  // Клик по фону, но не по окну.
+  $('.popup-fade').click(function (e) {
+    if ($(e.target).closest('.popup').length == 0) {
+      $(this).fadeOut(100);
+      $("body").removeClass('no-scroll');
+    }
+  });
+  // ============================================================
+
+  $(".button__delete-edit").on("click", function () {
+    event.preventDefault();
+    $(".form__edit").addClass("form__edit-active");
+    $(".placing__buttons").addClass("placing__buttons-notActive");
+    $(".dn").addClass("dn-active");
+    $(".button__save-edit").addClass("button__save-edit-active");
+    $(".button__delete-edit").addClass("button__delete-edit-notActive");
+  }),
 
     //Модальное окно "Добавить событие"
     $(".btn-big").on("click", function () {
@@ -71,11 +99,6 @@ $(function () {
     }),
     $(".modal__information-BTNclose").on("click", function () {
       event.preventDefault();
-      $(".modal__information").removeClass("modal__information-active");
-      $("body").removeClass('no-scroll');
-      $(".modal").removeClass("show");
-    }),
-    $(".modal").on("click", function () {
       $(".modal__information").removeClass("modal__information-active");
       $("body").removeClass('no-scroll');
       $(".modal").removeClass("show");
@@ -115,11 +138,202 @@ $(function () {
       $(".stylePage__img-box-1").removeClass("stylePage__border-active");
     }),
 
-    // Оранжевая рамка при выборе кол-ва страниц 
-    $(".stylePage__btn-1 ").on("click", function () {
-      $(".stylePage__btn-1 ").toggleClass("stylePage__border-active");
-      $(".stylePage__btn-2").removeClass("stylePage__border-active");
-    }),
+    // ==================== Содержимое сохранено (popup) ===================================
+    $('#inline-popups').magnificPopup({
+      delegate: 'a',
+      removalDelay: 500,
+      callbacks: {
+        beforeOpen: function () {
+          this.st.mainClass = this.st.el.attr('data-effect');
+        }
+      },
+      midClick: true
+    });
+
+
+  // Hinge effect popup
+  $('a.hinge').magnificPopup({
+    mainClass: 'mfp-with-fade',
+    removalDelay: 1000,
+    callbacks: {
+      beforeClose: function () {
+        this.content.addClass('hinge');
+      },
+      close: function () {
+        this.content.removeClass('hinge');
+      }
+    },
+    midClick: true
+  });
+
+
+  // ====================== Валидация обязательых форм =================================
+  $('#story_form1').submit(function (e) {
+    e.preventDefault();
+    var story_form1 = $('#story_title').val();
+    var story_form1 = $('#event_date').val();
+    var story_form1 = $('#event_time').val();
+    var story_form1 = $('#place_title').val();
+    var story_form1 = $('#address').val();
+    var story_form1 = $('#city').val();
+    var story_form1 = $('#state').val();
+    var story_form1 = $('#index').val();
+
+    $(".error").remove();
+
+    if (story_form1.length < 1) {
+      $('#story_title').after('<span class="error">Имя события обязательно</span>').addClass('border-red');
+    }
+    if (story_form1.length < 1) {
+      $('#event_date').after('<span class="error">Требуется дата события</span>').addClass('border-red');
+    }
+    if (story_form1.length < 1) {
+      $('#event_time').after('<span class="error">Требуется время события</span>').addClass('border-red');
+    }
+    if (story_form1.length < 1) {
+      $('#place_title').after('<span class="error">Название события обязательно</span>').addClass('border-red');
+    }
+    if (story_form1.length < 1) {
+      $('#address').after('<span class="error">Требуется адрес</span>').addClass('border-red');
+    }
+    if (story_form1.length < 1) {
+      $('#city').after('<span class="error">Требуется город</span>').addClass('border-red');
+    }
+    if (story_form1.length < 1) {
+      $('#state').after('<span class="error">Требуется государство</span>').addClass('border-red');
+    }
+    if (story_form1.length < 1) {
+      $('#index').after('<span class="error">Требуется индекс</span>').addClass('border-red');
+    }
+  });
+  $('#RSVP_form').submit(function (e) {
+    e.preventDefault();
+    var RSVP_form = $('#event_title').val();
+    var RSVP_form = $('#event_place').val();
+    var RSVP_form = $('#event_date').val();
+    var RSVP_form = $('#event_time').val();
+    var RSVP_form = $('#event_end-time').val();
+    var RSVP_form = $('#event_address').val();
+    var RSVP_form = $('#event_city').val();
+    var RSVP_form = $('#event_state').val();
+    var RSVP_form = $('#event_index').val();
+
+    $(".error").remove();
+
+    if (RSVP_form.length < 1) {
+      $('#event_title').addClass('border-red');
+      $('#event_place').addClass('border-red');
+      $('#event_date').addClass('border-red');
+      $('#event_time').addClass('border-red');
+      $('#event_end-time').addClass('border-red');
+      $('#event_address').addClass('border-red');
+      $('#event_city').addClass('border-red');
+      $('#event_state').addClass('border-red');
+      $('#event_index').addClass('border-red');
+    }
+  });
+  $('#story_form2').submit(function (e) {
+    e.preventDefault();
+    var story_form2 = $('#story_title2').val();
+    var story_form2 = $('#event_date2').val();
+    var story_form2 = $('#event_time2').val();
+    var story_form2 = $('#place_title2').val();
+    var story_form2 = $('#address2').val();
+    var story_form2 = $('#city2').val();
+    var story_form2 = $('#state2').val();
+    var story_form2 = $('#index2').val();
+
+    $(".error").remove();
+
+    if (story_form2.length < 1) {
+      $('#story_title2').after('<span class="error">Имя события обязательно</span>').addClass('border-red');
+    }
+    if (story_form2.length < 1) {
+      $('#event_date2').after('<span class="error">Требуется дата события</span>').addClass('border-red');
+    }
+    if (story_form2.length < 1) {
+      $('#event_time2').after('<span class="error">Требуется время события</span>').addClass('border-red');
+    }
+    if (story_form2.length < 1) {
+      $('#place_title2').after('<span class="error">Название события обязательно</span>').addClass('border-red');
+    }
+    if (story_form2.length < 1) {
+      $('#address2').after('<span class="error">Требуется адрес</span>').addClass('border-red');
+    }
+    if (story_form2.length < 1) {
+      $('#city2').after('<span class="error">Требуется город</span>').addClass('border-red');
+    }
+    if (story_form2.length < 1) {
+      $('#state2').after('<span class="error">Требуется государство</span>').addClass('border-red');
+    }
+    if (story_form2.length < 1) {
+      $('#index2').after('<span class="error">Требуется индекс</span>').addClass('border-red');
+    }
+  });
+  $('#placing_form2').submit(function (e) {
+    e.preventDefault();
+    var placing_form2 = $('#placing_type2').val();
+    var placing_form2 = $('#placing_title2').val();
+    var placing_form2 = $('#placing_address2').val();
+    var placing_form2 = $('#placing_city2').val();
+    var placing_form2 = $('#placing_state2').val();
+    var placing_form2 = $('#placing_index2').val();
+    var placing_form2 = $('#placing_phone2').val();
+
+    $(".error").remove();
+
+    if (placing_form2.length < 1) {
+      $('#placing_type2').after('<span class="error">Требуется тип размещения</span>').addClass('border-red');
+      $('#placing_title2').after('<span class="error">Имя обязательно</span>').addClass('border-red');
+      $('#placing_address2').after('<span class="error">Требуется адрес</span>').addClass('border-red');
+      $('#placing_city2').after('<span class="error">Требуется город</span>').addClass('border-red');
+      $('#placing_state2').after('<span class="error">Требуется состояние</span>').addClass('border-red');
+      $('#placing_index2').after('<span class="error">Требуется индекс</span>').addClass('border-red');
+      $('#placing_phone2').after('<span class="error">Требуется номер телефона</span>').addClass('border-red');
+    }
+  });
+  $('#placing_form').submit(function (e) {
+    e.preventDefault();
+    var placing_form = $('#placing_type').val();
+    var placing_form = $('#placing_title').val();
+    var placing_form = $('#placing_address').val();
+    var placing_form = $('#placing_city').val();
+    var placing_form = $('#placing_state').val();
+    var placing_form = $('#placing_index').val();
+    var placing_form = $('#placing_phone').val();
+
+    $(".error").remove();
+
+    if (placing_form.length < 1) {
+      $('#placing_type').after('<span class="error">Требуется тип размещения</span>').addClass('border-red');
+      $('#placing_title').after('<span class="error">Имя обязательно</span>').addClass('border-red');
+      $('#placing_address').after('<span class="error">Требуется адрес</span>').addClass('border-red');
+      $('#placing_city').after('<span class="error">Требуется город</span>').addClass('border-red');
+      $('#placing_state').after('<span class="error">Требуется состояние</span>').addClass('border-red');
+      $('#placing_index').after('<span class="error">Требуется индекс</span>').addClass('border-red');
+      $('#placing_phone').after('<span class="error">Требуется номер телефона</span>').addClass('border-red');
+    }
+  });
+  $('#registry_form').submit(function (e) {
+    e.preventDefault();
+    var registry_form = $('#registry_title').val();
+    var registry_form = $('#registry_link').val();
+
+    $(".error").remove();
+
+    if (registry_form.length < 1) {
+      $('#registry_title').after('<span class="error">Имя реестра обязательно</span>').addClass('border-red');
+      $('#registry_link').after('<span class="error">Ссылка на реестр требуется</span>').addClass('border-red');
+    }
+  });
+
+
+
+  // Оранжевая рамка при выборе кол-ва страниц 
+  $(".stylePage__btn-1 ").on("click", function () {
+    $(".stylePage__btn-1 ").toggleClass("stylePage__border-active");
+    $(".stylePage__btn-2").removeClass("stylePage__border-active");
+  }),
     $(".stylePage__btn-2 ").on("click", function () {
       $(".stylePage__btn-2 ").toggleClass("stylePage__border-active");
       $(".stylePage__btn-1").removeClass("stylePage__border-active");
@@ -154,7 +368,6 @@ $(function () {
         $(".privacy__form").removeClass("privacy__form-active");
       }
     });
-
 
   //всплываюзие черные подсказки
   $(document).ready(function () {

@@ -95,165 +95,79 @@
         </button>
       </div>
       <main class="main">
-        <section class="section-info">
-          <div class="top__info">
-            <div class="container-fluid">
-              <h2 class="info__title">РАЗМЕЩЕНИЕ</h2>
-            </div>
-          </div>
-          <div class="container-fluid">
-            <p class="info__text">
-              Сделайте это проще для ваших гостей, добавив
-              список номеров для ваших гостей.
-              Заполните как можно больше.
-            </p>
-          </div>
-        </section>
-        <form action="/">
-          <div class="form__welcome-group">
-            <div class="container-fluid">
-              <div class="placing__form">
-                <label class="form__label form__label-welcome">ЗАГОЛОВОК РАЗМЕЩЕНИЯ</label>
-                <input class="form__input form__input-welcom" type="text">
-              </div>
-              <div class="form__item form__item-question">
-                <label class="form__label form__label-placing">* ВВОДНЫЙ ТЕКСТ <span class="placing-span">(если вам не
-                    нужен какой-либо текст, просто сотрите его и
-                    оставьте пустым)</span></label>
-                <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
-              </div>
-              <div class="placing__form-btn">
-                <button class="btn btn-dark" type="submit">Сохранить</button>
-              </div>
-            </div>
-          </div>
-        </form>
-        <form action="/" id="placing_form">
-          <div class="form__welcome-group">
-            <div class="container-fluid">
-              <h1 class="placing__title">ДОБАВИТЬ ЖИЛЬЕ</h1>
-            </div>
-          </div>
-          <div class="form__welcome-group">
-            <div class="container-fluid">
-              <div class="placing__form">
-                <label class="form__label form__label-welcome">ТИП РАЗМЕЩЕНИЯ (гостиница, дом или аренда
-                  и т. д)</label>
-                <input class="form__input form__input-welcom" id="placing_type" type="text">
-              </div>
-              <div class="placing__form">
-                <label class="form__label form__label-welcome">НАЗВАНИЕ КОМПАНИИ</label>
-                <input class="form__input form__input-welcom" id="placing_title" type="text">
-              </div>
-              <div class="placing__form">
-                <label class="form__label form__label-welcome">АДРЕС УЛИЦЫ</label>
-                <input class="form__input form__input-welcom" id="placing_address" type="text">
-              </div>
-              <div class="form__place">
-                <div class="form__place-city">
-                  <label class="form__label form__label-welcome">ГОРОД</label>
-                  <input class="form__input form__input-welcom" id="placing_city" type="text" placeholder="Город">
-                </div>
-                <div class="form__place-state">
-                  <label class="form__label form__label-welcome">ГОСУДАРСТВО</label>
-                  <input class="form__input form__input-welcom" id="placing_state" type="text" placeholder="Государство">
-                </div>
-                <div class="form__place-index">
-                  <label class="form__label form__label-welcome">Индекс</label>
-                  <input class="form__input form__input-welcom" id="placing_index" type="text" placeholder="Индекс">
+        <div class="travels">
+          <form class="form__travels" action="/">
+            <div class="section-info">
+              <div class="top__info">
+                <div class="container-fluid">
+                  <h2 class="info__title">ПУТЕШЕСТВИЯ</h2>
                 </div>
               </div>
-              <div class="placing__form">
-                <label class="form__label form__label-welcome">НОМЕР ТЕЛЕФОНА</label>
-                <input class="form__input form__input-welcom" id="placing_phone" type="text">
-              </div>
-              <div class="placing__form">
-                <label class="form__label form__label-welcome">КОД ГРУППОВОЙ СКИДКИ</label>
-                <input class="form__input form__input-welcom" type="text">
-              </div>
-              <div class="placing__form">
-                <label class="form__label form__label-welcome">ВЕБ-САЙТ</label>
-                <input class="form__input form__input-welcom" type="text">
-              </div>
-              <div class="form__item form__item-question">
-                <label class="form__label form__label-welcome">ПОДЕЛИТЕСЬ НАПРАВЛЕНИЕМ
-                  <div class="tooltip">GOOGLE MAP
-                    <img class="question-iconMap" src="images/question.svg" alt="">
-                    <div class="tooltiptext">
-                      <ol>
-                        <li>В Google Maps нажмите значок "Поделиться".</li>
-                        <li>На вкладке "Отправить ссылку" скопируйте предоставленную ссылку.</li>
-                        <li>Вставьте ссылку Google Maps в поле ниже.</li>
-                        <li>Когда закончите, нажмите кнопку "Сохранить".</li>
-                      </ol>
-                    </div>
-                  </div>
-                </label>
-                <input class="form__input form__input-welcom" type="text">
-              </div>
-              <div class="form__item">
-                <label class="form__label form__label-welcome">ПРИМЕЧАНИЕ О ПУТЕШЕСТВИИ</label>
-                <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
-              </div>
-              <div class="timing__buttons">
-                <button class="btn btn-pink btn-timing">Отмена</button>
-                <button class="btn btn-dark btn-timing">Сохранить</button>
-              </div>
-            </div>
-          </div>
-        </form>
-        <form action="/" id="placing_form2">
-          <section class="section-info">
-            <div class="top__info">
               <div class="container-fluid">
-                <h2 class="info__title">ВАШЕ ЖИЛЬЕ</h2>
+                <p class="info__text">
+                  Сделайте это проще для ваших гостей, добавив список
+                  вариантов путешествий для ваших гостей. По крайней мере, мы
+                  рекомендуем перечислить маршрут до места проведения и стойки регистрации.
+                </p>
               </div>
             </div>
-            <div class="container-fluid">
-              <p class="info__text">
-                Если у вас есть правки, сделайте их и нажмите
-                Сохранить. Если вы хотите изменить порядок
-                размещения, используйте стрелки справа.
-              </p>
-            </div>
-          </section>
-          <div class="form__welcome-group">
-            <div class="container-fluid">
-              <div class="form__item form__item-top dn">
-                <label class="form__label form__label-welcome">НАЗВАНИЕ КОМПАНИИ</label>
-                <input class="form__input form__input-welcom" type="text">
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ДОРОЖНЫЙ ЗАГОЛОВОК</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="form__item form__item-question">
+                  <label class="form__label form__label-placing">ВВОДНЫЙ ТЕКСТ ПУТЕШЕСТВИЯ <span
+                      class="placing-span">(если вам не
+                      нужен какой-либо текст, просто сотрите его и
+                      оставьте пустым)</span></label>
+                  <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
+                </div>
+                <div class="placing__form-btn">
+                  <button class="btn btn-dark" type="submit">Сохранить</button>
+                </div>
               </div>
-              <div class="form__edit">
+            </div>
+          </form>
+          <form class="photos__form" action="/">
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <h1 class="placing__title">ДОБАВИТЬ ЖИЛЬЕ</h1>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="container-fluid">
                 <div class="placing__form">
                   <label class="form__label form__label-welcome">ТИП РАЗМЕЩЕНИЯ (гостиница, дом или аренда
                     и т. д)</label>
-                  <input class="form__input form__input-welcom" id="placing_type2" type="text">
+                  <input class="form__input form__input-welcom" type="text">
                 </div>
                 <div class="placing__form">
                   <label class="form__label form__label-welcome">НАЗВАНИЕ КОМПАНИИ</label>
-                  <input class="form__input form__input-welcom" id="placing_title2" type="text">
+                  <input class="form__input form__input-welcom" type="text">
                 </div>
                 <div class="placing__form">
                   <label class="form__label form__label-welcome">АДРЕС УЛИЦЫ</label>
-                  <input class="form__input form__input-welcom" id="placing_address2" type="text">
+                  <input class="form__input form__input-welcom" type="text">
                 </div>
                 <div class="form__place">
                   <div class="form__place-city">
                     <label class="form__label form__label-welcome">ГОРОД</label>
-                    <input class="form__input form__input-welcom" id="placing_city2" type="text" placeholder="Город">
+                    <input class="form__input form__input-welcom" type="text" placeholder="Город">
                   </div>
                   <div class="form__place-state">
                     <label class="form__label form__label-welcome">ГОСУДАРСТВО</label>
-                    <input class="form__input form__input-welcom" id="placing_state2" type="text" placeholder="Государство">
+                    <input class="form__input form__input-welcom" type="text" placeholder="Государство">
                   </div>
                   <div class="form__place-index">
                     <label class="form__label form__label-welcome">Индекс</label>
-                    <input class="form__input form__input-welcom" id="placing_index2" type="text" placeholder="Индекс">
+                    <input class="form__input form__input-welcom" type="text" placeholder="Индекс">
                   </div>
                 </div>
                 <div class="placing__form">
                   <label class="form__label form__label-welcome">НОМЕР ТЕЛЕФОНА</label>
-                  <input class="form__input form__input-welcom" id="placing_phone2" type="text">
+                  <input class="form__input form__input-welcom" type="number">
                 </div>
                 <div class="placing__form">
                   <label class="form__label form__label-welcome">КОД ГРУППОВОЙ СКИДКИ</label>
@@ -284,26 +198,105 @@
                   <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
                 </div>
                 <div class="timing__buttons">
-                  <button class="btn btn-pink btn-edit mt0 popup-open"><img class="btn-delete"
-                      src="images/delete.svg" alt=""> Удалить</button>
-                  <button class="btn btn-dark btn-edit mt0">Сохранить</button>
+                  <button class="btn btn-pink btn-timing">Отмена</button>
+                  <button class="btn btn-dark btn-timing">Сохранить</button>
                 </div>
               </div>
-              <div class="timing__buttons placing__buttons">
-                <button class="btn btn-pink btn-edit popup-open"><img class="btn-delete" src="images/delete.svg"
-                    alt=""> Удалить</button>
-                <button class="btn btn-dark btn-edit button__delete-edit">Изменить</button>
+            </div>
+            <div class="section-info">
+              <div class="top__info">
+                <div class="container-fluid">
+                  <h2 class="info__title">ВАШЕ ПУТЕШЕСТВИЕ</h2>
+                </div>
+              </div>
+              <div class="container-fluid">
+                <p class="info__text">
+                  Если у вас есть правки, сделайте их и нажмите Сохранить.
+                  Если вы хотите изменить порядок ваших планов поездок,
+                  используйте стрелки справа.
+                </p>
               </div>
             </div>
-          </div>
-        </form>
-
-
-
-
-
-
-
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <div class="form__item form__item-top dn">
+                  <label class="form__label form__label-welcome">НАЗВАНИЕ ПУТЕШЕСТВИЯ</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="form__edit">
+                  <div class="placing__form">
+                    <label class="form__label form__label-welcome">ТИП СОБЫТИЯ</label>
+                    <input class="form__input form__input-welcom" type="text">
+                  </div>
+                  <div class="placing__form">
+                    <label class="form__label form__label-welcome">НАЗВАНИЕ КОМПАНИИ</label>
+                    <input class="form__input form__input-welcom" type="text">
+                  </div>
+                  <div class="placing__form">
+                    <label class="form__label form__label-welcome">АДРЕС УЛИЦЫ</label>
+                    <input class="form__input form__input-welcom" type="text">
+                  </div>
+                  <div class="form__place">
+                    <div class="form__place-city">
+                      <label class="form__label form__label-welcome">ГОРОД</label>
+                      <input class="form__input form__input-welcom" type="text" placeholder="Город">
+                    </div>
+                    <div class="form__place-state">
+                      <label class="form__label form__label-welcome">ГОСУДАРСТВО</label>
+                      <input class="form__input form__input-welcom" type="text" placeholder="Государство">
+                    </div>
+                    <div class="form__place-index">
+                      <label class="form__label form__label-welcome">Индекс</label>
+                      <input class="form__input form__input-welcom" type="text" placeholder="Индекс">
+                    </div>
+                  </div>
+                  <div class="placing__form">
+                    <label class="form__label form__label-welcome">НОМЕР ТЕЛЕФОНА</label>
+                    <input class="form__input form__input-welcom" type="number">
+                  </div>
+                  <div class="placing__form">
+                    <label class="form__label form__label-welcome">КОД ГРУППОВОЙ СКИДКИ</label>
+                    <input class="form__input form__input-welcom" type="text">
+                  </div>
+                  <div class="placing__form">
+                    <label class="form__label form__label-welcome">ВЕБ-САЙТ</label>
+                    <input class="form__input form__input-welcom" type="text">
+                  </div>
+                  <div class="form__item form__item-question">
+                    <label class="form__label form__label-welcome">ПОДЕЛИТЕСЬ НАПРАВЛЕНИЕМ
+                      <div class="tooltip">GOOGLE MAP
+                        <img class="question-iconMap" src="images/question.svg" alt="">
+                        <div class="tooltiptext">
+                          <ol>
+                            <li>В Google Maps нажмите значок "Поделиться".</li>
+                            <li>На вкладке "Отправить ссылку" скопируйте предоставленную ссылку.</li>
+                            <li>Вставьте ссылку Google Maps в поле ниже.</li>
+                            <li>Когда закончите, нажмите кнопку "Сохранить".</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </label>
+                    <input class="form__input form__input-welcom" type="text">
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label form__label-welcome">ПРИМЕЧАНИЕ О ПУТЕШЕСТВИИ</label>
+                    <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
+                  </div>
+                  <div class="timing__buttons">
+                    <button class="btn btn-pink btn-edit mt0  popup-open"><img class="btn-delete"
+                        src="images/delete.svg" alt=""> Удалить</button>
+                    <button class="btn btn-dark btn-edit mt0">Сохранить</button>
+                  </div>
+                </div>
+                <div class="timing__buttons placing__buttons">
+                  <button class="btn btn-pink btn-edit  popup-open"><img class="btn-delete"
+                      src="images/delete.svg" alt=""> Удалить</button>
+                  <button class="btn btn-dark btn-edit button__delete-edit">Изменить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
         <!-- =================================================================== -->
         <div class="popup-fade">
           <div class="popup">

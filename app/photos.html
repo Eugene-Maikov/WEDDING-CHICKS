@@ -127,22 +127,100 @@
                   <div class="photo__container">
                     <div class="photo__download">
                       <img class="photo__img" src="images/photo.png" alt="photo">
-                      <div class="people__buttons">
-                        <div class="input__images-item">
+                      <div class="photo__buttons">
+                        <div class="input__photo-item">
                           <input class="form__input input__images" id="file" accept="image/*" type="file">
-                          <label class="label__file" for="file">Загрузить</label>
+                          <label class="label__file-photo" for="file">ОТПРВИТЬ ФОТОГРАФИИ</label>
                         </div>
-                        <div class="input__images-item">
-                          <button class="btn-download">ссылка на инстаграм</button>
+                        <div class="input__photo-item">
+                          <button class="btn__download-photo">ссылка на инстаграм</button>
                         </div>
                       </div>
                     </div>
-                    <div class="photo__text">Вы можете загрузить JPG, GIF или PNG (ограничение размера файла-10 МБ)</div>
+                    <div class="photo__info">
+                      <div class="photo__text">Вы можете загрузить JPG, GIF или PNG (ограничение размера файла-10 МБ)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__welcome-group">
+              <div class="photo__preview-inner">
+                <div class="photo__preview-item">
+                  <div class="photo__preview-image">
+                    <img class="photo__preview-img" src="images/preview.png" alt="image">
+                  </div>
+                  <div class="photo__preview-icons">
+                    <div class="preview-icon">
+                      <img class="preview__img-icon" src="images/scale.svg" alt="">
+                    </div>
+                    <div class="preview-icon popup-open">
+                      <img class="preview__img-icon" src="images/delete-white.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="photo__preview-item">
+                  <div class="photo__preview-image">
+                    <img class="photo__preview-img" src="images/preview.png" alt="image">
+                  </div>
+                  <div class="photo__preview-icons">
+                    <div class="preview-icon">
+                      <img class="preview__img-icon" src="images/scale.svg" alt="">
+                    </div>
+                    <div class="preview-icon popup-open">
+                      <img class="preview__img-icon" src="images/delete-white.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="photo__preview-item">
+                  <div class="photo__preview-image">
+                    <img class="photo__preview-img" src="images/preview.png" alt="image">
+                  </div>
+                  <div class="photo__preview-icons">
+                    <div class="preview-icon">
+                      <img class="preview__img-icon" src="images/scale.svg" alt="">
+                    </div>
+                    <div class="preview-icon popup-open">
+                      <img class="preview__img-icon" src="images/delete-white.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="photo__preview-item">
+                  <div class="photo__preview-image">
+                    <img class="photo__preview-img" src="images/preview.png" alt="image">
+                  </div>
+                  <div class="photo__preview-icons">
+                    <div class="preview-icon">
+                      <img class="preview__img-icon" src="images/scale.svg" alt="">
+                    </div>
+                    <div class="preview-icon popup-open">
+                      <img class="preview__img-icon" src="images/delete-white.svg" alt="">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
+
+            <!-- =================================================================== -->
+            <div class="popup-fade">
+              <div class="popup">
+                <!-- Закрыть -->
+                <a class="popup-close" href="#">
+                  <img src="images/close.svg" alt="">
+                </a>
+                <!-- Контент -->
+                <h2 class="popup__title">Вы уверены, что хотите удалить эту фотографию?</h2>
+                <p class="popup__text">Эта фотография будет удалена навсегда. Вы не можете отменить это действие.</p>
+                <!-- Кнопки -->
+                <div class="popup__buttons">
+                  <button class="btn btn-dark popup__btn popup-close-btn">Отмена</button>
+                  <button class="btn btn-pink popup__btn ml15">Удалить</button>
+                </div>
+              </div>
+            </div>
+            <!-- =================================================================== -->
 
 
 
@@ -158,6 +236,14 @@
 
           </form>
         </div>
+
+
+        <!-- =================== Содержимое сохранено (popup) ============================= -->
+        <div id="inline-popups">
+          <a href="#test-popup" data-effect="mfp-move-horizontal">Всплывашка "Сохранить содержимое"</a>
+        </div>
+        <div id="test-popup" class="save-popup mfp-with-anim mfp-hide">Содержимое Страницы Успешно Сохранено.</div>
+
       </main>
     </div>
 

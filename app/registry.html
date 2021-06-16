@@ -23,6 +23,7 @@
       <aside class="aside">
         <button class="btn btn-pink">управление контентом</button>
         <h4 class="aside__title">редактирование страниц</h4>
+
         <div class="aside__list">
           <div class="aside__list-item">Добро пожаловать</div>
           <div class="aside__list-item">
@@ -83,7 +84,7 @@
           </div>
         </div>
         <button class="btn btn-pink">конструкция выключателя</button>
-        <p class="aside__title">Ваши кости</p>
+        <div class="aside__title">Ваши кости</div>
         <div class="aside__info">
           <p class="aside__info-first">Трек RSVPS</p>
           <p class="aside__info-second">Сбор Физических Адресов</p>
@@ -120,159 +121,160 @@
                 <label class="switch-registry" for="switch-registry" data-checked="ON" data-unchecked="OFF"></label>
               </div>
             </div>
-            <div class="form__welcome-group">
+          </form>
+          
+          
+          <div class="section-info">
+            <div class="top__info">
               <div class="container-fluid">
-                <div class="registry__form">
-                  <label class="form__label form__label-welcome">ЗАГОЛОВОК РЕЕСТРА</label>
-                  <input class="form__input form__input-welcom" type="text">
-                </div>
-                <div class="form__item form__item-question">
-                  <label class="form__label form__label-placing">ВВОДНЫЙ ТЕКСТ РЕЕСТРА</label>
-                  <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
-                </div>
-                <div class="placing__form-btn">
-                  <button class="btn btn-dark" type="submit">Сохранить</button>
-                </div>
+                <h2 class="info__title">ДОБАВИТЬ ДРУГИЕ РЕЕСТРЫ</h2>
               </div>
             </div>
-            <div class="section-info">
-              <div class="top__info">
-                <div class="container-fluid">
-                  <h2 class="info__title">ДОБАВИТЬ ДРУГИЕ РЕЕСТРЫ</h2>
-                </div>
-              </div>
-              <div class="container-fluid">
-                <p class="info__text">
-                  Просто скопируйте и вставьте ссылку из других ваших 
-                  свадебных реестров ниже, чтобы гости могли легко посетить все ваши
-                  свадебные реестры.
-                </p>
-              </div>
+            <div class="container-fluid">
+              <p class="info__text">
+                Просто скопируйте и вставьте ссылку из других ваших
+                свадебных реестров ниже, чтобы гости могли легко посетить все ваши
+                свадебные реестры.
+              </p>
             </div>
+          </div>
+          <form action="/" id="registry_form">
             <div class="form__welcome-group">
               <div class="container-fluid">
                 <div class="registry__form">
                   <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
-                  <input class="form__input form__input-welcom" type="text">
+                  <input class="form__input form__input-welcom" id="registry_title" type="text">
                 </div>
                 <div class="registry__form">
                   <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
-                  <input class="form__input form__input-welcom" type="text">
+                  <input class="form__input form__input-welcom" id="registry_link" type="text">
                 </div>
                 <div class="placing__form-btn mt15">
                   <button class="btn btn-dark" type="submit">Сохранить</button>
                 </div>
               </div>
             </div>
-            <div class="section-info">
-              <div class="top__info">
-                <div class="container-fluid">
-                  <h2 class="info__title">ДРУГИЕ ВАШИ РЕЕСТРЫ</h2>
-                </div>
-              </div>
-              <div class="container-fluid">
-                <p class="info__text">
-                  Если у вас есть правки, внесите их и нажмите сохранить. 
-                  Если вы хотите изменить порядок своих реестров, используйте
-                  стрелки справа.
-                </p>
-              </div>
-            </div>
-            <div class="form__welcome-group">
-              <div class="container-fluid">
-                <div class="registry__form">
-                  <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
-                  <input class="form__input form__input-welcom" type="text">
-                </div>
-                <div class="registry__form">
-                  <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
-                  <input class="form__input form__input-welcom" type="text">
-                </div>
-                <div class="timing__buttons placing__buttons">
-                  <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete" src="images/delete.svg" alt="">
-                    Удалить</button>
-                  <button class="btn btn-dark btn-edit">Сохранить</button>
-                </div>
-              </div>
-            </div>
-            <div class="form__welcome-group">
-              <div class="container-fluid">
-                <div class="registry__form">
-                  <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
-                  <input class="form__input form__input-welcom" type="text">
-                </div>
-                <div class="registry__form">
-                  <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
-                  <input class="form__input form__input-welcom" type="text">
-                </div>
-                <div class="timing__buttons placing__buttons">
-                  <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete" src="images/delete.svg" alt="">
-                    Удалить</button>
-                  <button class="btn btn-dark btn-edit">Сохранить</button>
-                </div>
-              </div>
-            </div>
-            <div class="form__welcome-group">
-              <div class="container-fluid">
-                <div class="registry__form">
-                  <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
-                  <input class="form__input form__input-welcom" type="text">
-                </div>
-                <div class="registry__form">
-                  <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
-                  <input class="form__input form__input-welcom" type="text">
-                </div>
-                <div class="timing__buttons placing__buttons">
-                  <button class="btn btn-pink btn-edit box__delete-press"><img class="btn-delete" src="images/delete.svg" alt="">
-                    Удалить</button>
-                  <button class="btn btn-dark btn-edit">Сохранить</button>
-                </div>
-              </div>
-            </div>
-            <div class="modal">
-              <div class="box__delete">
-                <div class="box__delete-icon">
-                  <img class="box__delete-close" src="images/close.svg" alt="">
-                </div>
-                <h3 class="box__title">Вы уверены, что хотите удалить это событие?</h3>
-                <p class="box__text">Это событие будет удалено навсегда. Вы не можете отменить это действие.
-                </p>
-                <div class="timing__buttons-delete">
-                  <button class="btn btn-dark box__delete-btn button__delete-cloce">ОТМЕНА</button>
-                  <button class="btn btn-pink box__delete-btn">УДАЛИТЬ</button>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </form>
+          
+          <div class="section-info">
+            <div class="top__info">
+              <div class="container-fluid">
+                <h2 class="info__title">ДРУГИЕ ВАШИ РЕЕСТРЫ</h2>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <p class="info__text">
+                Если у вас есть правки, внесите их и нажмите сохранить.
+                Если вы хотите изменить порядок своих реестров, используйте
+                стрелки справа.
+              </p>
+            </div>
+          </div>
+          <div class="form__welcome-group">
+            <div class="container-fluid">
+              <div class="registry__form">
+                <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
+                <input class="form__input form__input-welcom" type="text">
+              </div>
+              <div class="registry__form">
+                <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
+                <input class="form__input form__input-welcom" type="text">
+              </div>
+              <div class="timing__buttons placing__buttons">
+                <button class="btn btn-pink btn-edit popup-open"><img class="btn-delete" src="images/delete.svg" alt="">
+                  Удалить</button>
+                <button class="btn btn-dark btn-edit">Сохранить</button>
+              </div>
+            </div>
+          </div>
+          <div class="form__welcome-group">
+            <div class="container-fluid">
+              <div class="registry__form">
+                <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
+                <input class="form__input form__input-welcom" type="text">
+              </div>
+              <div class="registry__form">
+                <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
+                <input class="form__input form__input-welcom" type="text">
+              </div>
+              <div class="timing__buttons placing__buttons">
+                <button class="btn btn-pink btn-edit popup-open"><img class="btn-delete" src="images/delete.svg" alt="">
+                  Удалить</button>
+                <button class="btn btn-dark btn-edit">Сохранить</button>
+              </div>
+            </div>
+          </div>
+          <div class="form__welcome-group">
+            <div class="container-fluid">
+              <div class="registry__form">
+                <label class="form__label form__label-welcome">ИМЯ РЕЕСТРА</label>
+                <input class="form__input form__input-welcom registry_title" type="text">
+              </div>
+              <div class="registry__form">
+                <label class="form__label form__label-welcome">ССЫЛКА НА РЕЕСТР</label>
+                <input class="form__input form__input-welcom registry_link" type="text">
+              </div>
+              <div class="timing__buttons placing__buttons">
+                <button class="btn btn-pink btn-edit popup-open"><img class="btn-delete" src="images/delete.svg" alt="">
+                  Удалить</button>
+                <button class="btn btn-dark btn-edit">Сохранить</button>
+              </div>
+            </div>
+          </div>
+          <!-- =================================================================== -->
+          <div class="popup-fade">
+            <div class="popup">
+              <!-- Закрыть -->
+              <a class="popup-close" href="#">
+                <img src="images/close.svg" alt="">
+              </a>
+              <!-- Контент -->
+              <h2 class="popup__title">Вы уверены, что хотите удалить эту фотографию?</h2>
+              <p class="popup__text">Эта фотография будет удалена навсегда. Вы не можете отменить это действие.</p>
+              <!-- Кнопки -->
+              <div class="popup__buttons">
+                <button class="btn btn-dark popup__btn popup-close-btn">Отмена</button>
+                <button class="btn btn-pink popup__btn ml15">Удалить</button>
+              </div>
+            </div>
+          </div>
+          <!-- =================================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
 
+        <!-- =================== Содержимое сохранено (popup) ============================= -->
+        <div id="inline-popups">
+          <a href="#test-popup" data-effect="mfp-move-horizontal">Всплывашка "Сохранить содержимое"</a>
+        </div>
+        <div id="test-popup" class="save-popup mfp-with-anim mfp-hide">Содержимое Страницы Успешно Сохранено.</div>
 
       </main>
     </div>

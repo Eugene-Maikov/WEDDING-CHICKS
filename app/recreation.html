@@ -95,86 +95,36 @@
         </button>
       </div>
       <main class="main">
-        <section class="welcome">
-          <div class="welcome__intro">
-            <div class="welcome__intro-box">
-              <div class="container-fluid">
-                <h1 class="title welcome__title">Добро пожаловать</h1>
-              </div>
-            </div>
-            <div class="container-fluid">
-              <p class="welcome__text">
-                Это первая страница, которую ваши гости увидят при посещении
-                вашего свадебного сайта. Мы рекомендуем постараться
-                добавить как можно больше вашей индивидуальности, добавив
-                фотографии, ваш свадебный хэштег и сердечное приветственное
-                сообщение. Если у вас нет текста или фотографии прямо сейчас,
-                просто оставьте его пустым и заполните позже. Счастливой
-                Свадьбы!
-              </p>
-            </div>
-          </div>
-          <form class="form__welcome" enctype="multipart/form-data" method="post" action="/">
-            <div class="form__welcome-group">
-              <div class="container-fluid">
-                <div class="form__welcome-inner">
-                  <div class="label">
-                    <label class="form__label form__label-welcome">Имя</label>
-                  </div>
-                  <div class="form__welcome-items">
-                    <div class="form__welcome-item">
-                      <input class="form__input form__input-welcom" name="input-name" type="text">
-                    </div>
-                    <div class="form__welcome-item">
-                      <input class="form__input form__input-welcom" name="input-name" type="text">
-                    </div>
-                  </div>
+        <div class="recreation">
+          <form class="form__recreation" action="/">
+            <div class="section-info">
+              <div class="top__info">
+                <div class="container-fluid">
+                  <h2 class="info__title">ЧЕМ ЗАНЯТЬСЯ</h2>
                 </div>
               </div>
-            </div>
-            <div class="form__welcome-group">
               <div class="container-fluid">
-                <div class="form__welcome-inner">
-                  <div class="label">
-                  </div>
-                  <div class="form__welcome-items">
-                    <div class="form__welcome-item">
-                      <label class="form__label form__label-welcome">ДАТА СВАДЬБЫ</label>
-                      <input class="form__input form__input-welcom" name="input-date" type="date">
-                    </div>
-                    <div class="form__welcome-item">
-                      <label class="form__label form__label-welcome">МЕСТО ПРОВЕДЕНИЯ
-                        СВАДЬБЫ</label>
-                      <input class="form__input form__input-welcom" name="input-name" type="text">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form__welcome-group">
-              <div class="container-fluid">
-                <div class="form__welcome-inner">
-                  <div class="label">
-                  </div>
-                  <div class="form__welcome-items">
-                    <div class="form__welcome-item">
-                      <label class="form__label form__label-welcome">СВАДЕБНЫЙ ХЭШ-ТЕГ</label>
-                      <input class="form__input form__input-welcom" name="input-hashtag" type="text">
-                    </div>
-                  </div>
-                </div>
+                <p class="info__text">
+                  Если гости едут на вашу свадьбу, обязательно сообщите
+                  им обо всех ваших любимых местах в этом районе. Они определенно
+                  захотят узнать ваши любимые места, где можно поесть и
+                  что заказать. Поделитесь некоторыми видами деятельности, которые
+                  вы оба любите делать в этом районе, например музеями,
+                  активными мероприятиями на свежем воздухе, туристическими
+                  достопримечательностями и отличными местами для покупок
+                  или получения непредвиденных расходов.
+                </p>
               </div>
             </div>
             <div class="form__welcome-group">
               <div class="container-fluid">
                 <div class="hello__content">
-                  <h2 class="title hello__title">ПРИВЕТСТВЕННЫЕ ФОТОГРАФИИ</h2>
+                  <h2 class="title hello__title">ЧЕМ ЗАНЯТЬСЯ ФОТОГРАФИИ</h2>
                   <div class="hello__text">
-                    <p>Ты еще не сфотографировала свою помолвку? Нет проблем!</p>
-                    <p>Настройте свой свадебный сайт, используя фотографии из Instagram
-                      или телефона.</p>
+                    <p>Загрузите фотографии этого района или поделитесь еще
+                      несколькими своими фотографиями, или откажитесь от фотографий всех
+                      вместе. Просто оставьте пустым и перейдите к следующему разделу.</p>
                   </div>
-                  <a class="hello__link" href="index.html">ИЗМЕНИТЬ МАКЕТ ФОТОГРАФИИ</a>
                 </div>
               </div>
               <div class="download__images-inner">
@@ -235,78 +185,76 @@
             </div>
             <div class="form__welcome-group">
               <div class="container-fluid">
-                <label class="form__label form__label-welcome">ЗАГОЛОВОК НАШЕЙ ИСТОРИИ</label>
-                <input class="form__input form__input-welcom" name="input-history" type="text">
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">ЧТО ДЕЛАТЬ ЗАГОЛОВОК</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="registry__form">
+                  <label class="form__label form__label-welcome">МЕСТО ПРОВЕДЕНИЯ СВАДЬБЫ</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="form__item form__item-question">
+                  <label class="form__label form__label-placing">ПОЧЕМУ ВЫ ВЫБРАЛИ ИМЕННО ЭТО МЕСТО ДЛЯ СВАДЬБЫ</label>
+                  <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
+                </div>
+                <div class="placing__form-btn">
+                  <button class="btn btn-dark" type="submit">Сохранить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form class="photos__form" action="/">
+            <div class="form__welcome-group">
+              <div class="container-fluid">
+                <h1 class="placing__title">ДОБАВИТЬ ЖИЛЬЕ</h1>
               </div>
             </div>
             <div class="form__welcome-group">
               <div class="container-fluid">
-                <label class="form__label form__label-welcome">НАША ИСТОРИЯ ПОСЛАНИЕ</label>
-                <textarea class="form__textarea" name="input-text"></textarea>
-                <div class="hello__content">
-                  <h2 class="title hello__title">ДОБРО ПОЖАЛОВАТЬ ФОТОГРАФИИ НИЖНЕГО КОЛОНТИТУЛА</h2>
-                  <div class="hello__text">
-                    <p>Если у вас нет никаких фотографий для использования, нет проблем! Приходите
-                      позже
-                      и загружайте их
-                      всякий раз, когда вы делаете несколько фотографий, которые вам нравятся.</p>
-                  </div>
+                <div class="placing__form">
+                  <label class="form__label form__label-welcome">ТИП СОБЫТИЯ</label>
+                  <input class="form__input form__input-welcom" type="text">
                 </div>
-              </div>
-              <div class="upload__photo">
-                <div class="upload__photo__inner">
-                  <div class="upload__photo__item">
-                    <img class="upload__input-img" src="images/download-img2.jpg" alt="upload">
-                    <div class="upload__btn">
-                      <div class="upload__btn-item">
-                        <input class="input__images" id="file" accept="image/*" type="file">
-                        <label class="label__file" for="file">Загрузить</label>
-                      </div>
-                      <div class="upload__btn-item">
-                        <button class="btn-download">ссылка на инстаграм</button>
+                <div class="placing__form">
+                  <label class="form__label form__label-welcome">ИМЯ СОБЫТИЯ</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="placing__form">
+                  <label class="form__label form__label-welcome">НОМЕР ТЕЛЕФОНА</label>
+                  <input class="form__input form__input-welcom" type="number">
+                </div>
+                <div class="placing__form">
+                  <label class="form__label form__label-welcome">ВЕБ-САЙТ</label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="form__item form__item-question">
+                  <label class="form__label form__label-welcome">ПОДЕЛИТЕСЬ НАПРАВЛЕНИЕМ
+                    <div class="tooltip">GOOGLE MAP
+                      <img class="question-iconMap" src="images/question.svg" alt="">
+                      <div class="tooltiptext">
+                        <ol>
+                          <li>В Google Maps нажмите значок "Поделиться".</li>
+                          <li>На вкладке "Отправить ссылку" скопируйте предоставленную ссылку.</li>
+                          <li>Вставьте ссылку Google Maps в поле ниже.</li>
+                          <li>Когда закончите, нажмите кнопку "Сохранить".</li>
+                        </ol>
                       </div>
                     </div>
-                  </div>
-                  <div class="upload__photo__item">
-                    <img class="upload__input-img" src="images/download-img2.jpg" alt="upload">
-                    <div class="upload__btn">
-                      <div class="upload__btn-item">
-                        <input class="input__images" id="file" accept="image/*" type="file">
-                        <label class="label__file" for="file">Загрузить</label>
-                      </div>
-                      <div class="upload__btn-item">
-                        <button class="btn-download">ссылка на инстаграм</button>
-                      </div>
-                    </div>
-                  </div>
+                  </label>
+                  <input class="form__input form__input-welcom" type="text">
+                </div>
+                <div class="form__item">
+                  <label class="form__label form__label-welcome">ПРИМЕЧАНИЕ О ПУТЕШЕСТВИИ</label>
+                  <textarea class="form__textarea form__textarea-placing" name="input-text"></textarea>
+                </div>
+                <div class="timing__buttons">
+                  <button class="btn btn-pink btn-timing">Отмена</button>
+                  <button class="btn btn-dark btn-timing">Сохранить</button>
                 </div>
               </div>
-              <div class="hello__content">
-                <div class="container-fluid">
-                  <h2 class="title hello__title">КАК ИСПОЛЬЗОВАТЬ ВАШИ ФОТОГРАФИИ IG</h2>
-                  <div class="hello__list-ml">
-                    <ol class="hello__list">
-                      <li class="hello__list-item">Убедитесь, что ваш IG не является частным (в
-                        противном
-                        случае ваши фотографии не будут отображаться)</li>
-                      <li class="hello__list-item">Скопируйте и вставьте URL-адрес фотографии
-                        Instagram,
-                        которую вы хотите использовать (когда вы нажимаете на одну из
-                        своих фотографий, используйте текст в строке URL)</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="btn__saveChanges">
-              <button class="btn btn-dark btn__save" type="submit">Сохранить изменения</button>
             </div>
           </form>
-
-
-        </section>
-
-
+        </div>
 
         <!-- =================== Содержимое сохранено (popup) ============================= -->
         <div id="inline-popups">
@@ -316,18 +264,6 @@
 
       </main>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="js/main.min.js"></script>
 </body>
